@@ -6,9 +6,9 @@ import { StarField } from '@/components/star-field'
 import { SiteFooter } from '@/components/site-footer'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Sweetex AI',
+  title: 'Privacy Policy — Vertex AI',
   description:
-    'Learn how Sweetex AI collects, uses, and protects your personal information when you use our algorithmic trading signals and tools.',
+    'Learn how Vertex AI collects, uses, and protects your personal information when you use our algorithmic trading signals and tools.',
 }
 
 const LAST_UPDATED = 'July 12, 2026'
@@ -17,8 +17,8 @@ const SECTIONS = [
   {
     heading: '1. Introduction',
     body: [
-      'Sweetex AI ("Sweetex AI", "we", "us", or "our") provides an algorithmic trading assistant that delivers automated, data-driven trading signals and chart-analysis tools. This Privacy Policy explains what information we collect, how we use it, and the choices you have.',
-      'By creating an account or using Sweetex AI, you agree to the practices described in this policy. If you do not agree, please discontinue use of the service.',
+      'Vertex AI ("Vertex AI", "we", "us", or "our") provides an algorithmic trading assistant that delivers automated, data-driven trading signals and chart-analysis tools. This Privacy Policy explains what information we collect, how we use it, and the choices you have.',
+      'By creating an account or using Vertex AI, you agree to the practices described in this policy. If you do not agree, please discontinue use of the service.',
     ],
   },
   {
@@ -41,14 +41,14 @@ const SECTIONS = [
   {
     heading: '4. Trading Data & Signals',
     body: [
-      'Sweetex AI provides tools and signals for informational purposes only. We do not execute trades on your behalf and we do not have access to your brokerage funds. Any trading you perform through third-party brokers is entirely your responsibility.',
+      'Vertex AI provides tools and signals for informational purposes only. We do not execute trades on your behalf and we do not have access to your brokerage funds. Any trading you perform through third-party brokers is entirely your responsibility.',
       'Signal outputs and analysis results are generated based on market data and are not guarantees of future performance.',
     ],
   },
   {
     heading: '5. Third-Party Services',
     body: [
-      'We rely on trusted third parties to operate Sweetex AI, including authentication and hosting providers. These providers process data only as needed to deliver their services.',
+      'We rely on trusted third parties to operate Vertex AI, including authentication and hosting providers. These providers process data only as needed to deliver their services.',
       'Some links (for example, broker sign-up links and our Telegram support channel) direct you to external platforms that operate under their own privacy policies. We are not responsible for the practices of those third parties.',
     ],
   },
@@ -79,13 +79,13 @@ const SECTIONS = [
   {
     heading: '10. Children’s Privacy',
     body: [
-      'Sweetex AI is not intended for anyone under the age of 18. We do not knowingly collect personal information from children. If you believe a minor has provided us information, please contact us so we can remove it.',
+      'Vertex AI is not intended for anyone under the age of 18. We do not knowingly collect personal information from children. If you believe a minor has provided us information, please contact us so we can remove it.',
     ],
   },
   {
     heading: '11. Changes to This Policy',
     body: [
-      'We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date above. Continued use of Sweetex AI after changes take effect constitutes acceptance of the revised policy.',
+      'We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date above. Continued use of Vertex AI after changes take effect constitutes acceptance of the revised policy.',
     ],
   },
   {
@@ -107,15 +107,15 @@ export default function PrivacyPolicyPage() {
             <Link href="/" className="flex items-center gap-2.5">
               <span className="relative h-9 w-9 overflow-hidden rounded-lg ring-1 ring-border">
                 <Image
-                  src="/sweetex-logo.jpg"
-                  alt="Sweetex AI logo"
+                  src="/vertex-logo.png"
+                  alt="Vertex AI logo"
                   fill
                   className="object-cover"
                   sizes="36px"
                 />
               </span>
               <span className="text-lg font-bold tracking-tight">
-                Sweetex <span className="text-shine">AI</span>
+                Vertex <span className="text-shine">AI</span>
               </span>
             </Link>
             <Link
@@ -148,7 +148,7 @@ export default function PrivacyPolicyPage() {
               </div>
             </div>
             <p className="relative mt-5 text-pretty text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Your privacy matters to us. This policy describes how Sweetex AI
+              Your privacy matters to us. This policy describes how Vertex AI
               handles your information when you use our trading signals, chart
               analyzers, and related tools.
             </p>

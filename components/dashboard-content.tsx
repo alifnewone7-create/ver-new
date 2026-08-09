@@ -43,11 +43,11 @@ export function DashboardContent({ profile }: { profile: UserProfile }) {
           <span aria-hidden className="welcome-luxe-border" />
           {/* corner glow */}
           <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,var(--primary)_38%,transparent)] blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,oklch(0.58_0.24_300)_24%,transparent)] blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,oklch(0.58 0.24 128)_24%,transparent)] blur-3xl" />
           {/* purple inner glow — breathing radial bloom from center */}
           <span aria-hidden className="welcome-luxe-purple pointer-events-none absolute inset-0 rounded-[1.75rem]" />
           {/* inner glow — soft light bleeding from the top edge */}
-          <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] shadow-[inset_0_1px_0_oklch(1_0_0/0.08),inset_0_40px_80px_-40px_color-mix(in_oklab,var(--primary)_45%,transparent),inset_0_0_120px_-30px_color-mix(in_oklab,oklch(0.55_0.24_300)_55%,transparent)]" />
+          <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] shadow-[inset_0_1px_0_oklch(1_0_0/0.08),inset_0_40px_80px_-40px_color-mix(in_oklab,var(--primary)_45%,transparent),inset_0_0_120px_-30px_color-mix(in_oklab,oklch(0.55 0.24 128)_55%,transparent)]" />
 
           <div className="relative z-10 flex flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:gap-7 sm:text-left">
             {/* Profile picture — floating with animated glow ring */}
@@ -61,7 +61,7 @@ export function DashboardContent({ profile }: { profile: UserProfile }) {
               />
               <span className="relative z-10 block h-full w-full overflow-hidden rounded-[1.4rem] ring-1 ring-primary/40">
                 <Image
-                  src="/sweetex-profile.png"
+                  src="/vertex-profile.png"
                   alt={`${firstName} profile`}
                   width={128}
                   height={128}

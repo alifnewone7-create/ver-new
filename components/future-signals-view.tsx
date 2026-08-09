@@ -39,7 +39,7 @@ type Signal = {
 type Phase = 'idle' | 'scanning' | 'ready'
 
 const TERMINAL_LINES = [
-  '$ sweetex-ai --engine future-signals',
+  '$ vertex-ai --engine future-signals',
   '> booting neural core ....... OK',
   '> loading market feed ........ OK',
   '> syncing candle streams ..... OK',
@@ -574,15 +574,15 @@ function SignalTerminal({ phase, signals }: { phase: Phase; signals: Signal[] })
   }, [visibleLines, phase])
 
   return (
-    <section className="border-luxe animate-in fade-in slide-in-from-bottom-3 overflow-hidden rounded-3xl bg-[oklch(0.13_0.03_280)] duration-500">
+    <section className="border-luxe animate-in fade-in slide-in-from-bottom-3 overflow-hidden rounded-3xl bg-[oklch(0.13 0.03 128)] duration-500">
       {/* terminal top bar */}
-      <div className="flex items-center gap-2 border-b border-border/60 bg-[oklch(0.17_0.035_278)] px-4 py-3">
+      <div className="flex items-center gap-2 border-b border-border/60 bg-[oklch(0.17 0.035 128)] px-4 py-3">
         <span className="h-3 w-3 rounded-full bg-destructive/70" />
         <span className="h-3 w-3 rounded-full bg-[var(--gold)]/70" />
         <span className="h-3 w-3 rounded-full bg-up/70" />
         <span className="ml-2 flex items-center gap-1.5 font-mono text-xs text-muted-foreground">
           <Cpu className="h-3.5 w-3.5 text-accent" />
-          sweetex@ai — future-signals
+          vertex@ai — future-signals
         </span>
       </div>
 

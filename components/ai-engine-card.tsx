@@ -28,7 +28,7 @@ export function AiEngineCard() {
             <BrainCircuit className="icon-pulse-soft h-5 w-5" />
           </span>
           <div>
-            <p className="text-sm font-semibold leading-tight">Sweetex AI Engine</p>
+            <p className="text-sm font-semibold leading-tight">Vertex AI Engine</p>
             <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--up)]" />
               Live · scanning markets
@@ -74,7 +74,7 @@ export function AiEngineCard() {
 
       <div className="relative mt-5 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
         <Workflow className="icon-pulse-soft h-3.5 w-3.5 text-accent" />
-        Powered by Sweetex AI real-time algorithm
+        Powered by Vertex AI real-time algorithm
       </div>
     </div>
   )

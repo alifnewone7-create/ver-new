@@ -33,7 +33,7 @@ import {
   type TradeResult,
 } from '@/lib/mtg'
 
-const STORAGE_KEY = 'sweetex:management:session'
+const STORAGE_KEY = 'vertex:management:session'
 
 /** A generated + saved trade sheet session. */
 interface Session {

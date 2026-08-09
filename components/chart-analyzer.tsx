@@ -70,7 +70,7 @@ const ANALYSIS_LINES = [
   'Locking 1-min bias',
 ]
 
-const ANALYSIS_CACHE_PREFIX = 'sweetex:chart-analysis:v1'
+const ANALYSIS_CACHE_PREFIX = 'vertex:chart-analysis:v1'
 
 function readImage(file: File) {
   return new Promise<string>((resolve, reject) => {
@@ -282,7 +282,7 @@ export function ChartAnalyzer({ mode }: { mode: AnalyzerMode }) {
       ) : (
         <section className="border-luxe surface-luxe card-corner-glow relative overflow-hidden rounded-3xl">
           {/* Terminal-style header, flush with the top of the card */}
-          <div className="relative z-10 flex items-center gap-2 border-b border-[oklch(0.7_0.16_255_/_0.55)] px-5 py-3 sm:px-6">
+          <div className="relative z-10 flex items-center gap-2 border-b border-[oklch(0.7 0.16 128_/_0.55)] px-5 py-3 sm:px-6">
             {mode === 'real' ? (
               <>
                 <span
@@ -317,7 +317,7 @@ export function ChartAnalyzer({ mode }: { mode: AnalyzerMode }) {
             <span className="ml-2 flex min-w-0 items-center gap-1.5 font-mono text-xs text-muted-foreground">
               <Cpu className="h-3.5 w-3.5 shrink-0 text-accent" />
               <span className="truncate whitespace-nowrap">
-                sweetex@ai — {mode === 'real' ? 'Real Chart Analyzer' : 'Otc Chart Analyzer'}
+                vertex@ai — {mode === 'real' ? 'Real Chart Analyzer' : 'Otc Chart Analyzer'}
               </span>
             </span>
           </div>

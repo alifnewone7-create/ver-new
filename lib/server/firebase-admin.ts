@@ -11,13 +11,13 @@
 
 import 'server-only'
 
-const API_KEY = 'AIzaSyAHhtE985RjzhKLhGd-42HZCzuyplqkiYo'
+const API_KEY = 'AIzaSyAFm1BmjxTKS6CzETCnEEMVlqKLn3hhrz8'
 const DB_URL =
-  'https://sweetex-ai-default-rtdb.asia-southeast1.firebasedatabase.app'
+  'https://vertex-ai-d21c3-default-rtdb.asia-southeast1.firebasedatabase.app'
 
 // Dedicated internal admin identity (NOT a real end user). The security rules
 // reference this exact email to authorize tier + usage writes.
-export const ADMIN_DB_EMAIL = 'portal-admin@sweetex-ai.internal'
+export const ADMIN_DB_EMAIL = 'portal-admin@vertex-ai.internal'
 const ADMIN_DB_PASSWORD = 'Sx9!portal_Rtdb#adminOnly_2f7Kd$Qa1zP'
 
 const IDENTITY_BASE = 'https://identitytoolkit.googleapis.com/v1'

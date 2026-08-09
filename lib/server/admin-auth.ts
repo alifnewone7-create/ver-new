@@ -15,7 +15,7 @@ const ADMIN_SECRET_KEY =
   'sec_K9#mT4@Xv8!Qa2$Lf7&Np5^Hs1*Dz6%Rw3@Ju0#Ce9$By4&Gk8*Pm2^Yn5!Vo7'
 
 // Secret used to sign the admin session cookie.
-const COOKIE_SECRET = 'sx-portal-cookie-secret::9d4Fa!kQ72zP#rtdb$sweetex'
+const COOKIE_SECRET = 'sx-portal-cookie-secret::9d4Fa!kQ72zP#rtdb$vertex'
 
 export const ADMIN_COOKIE = 'sx_portal_session'
 // Long-lived session so admins stay signed in across visits (30 days).

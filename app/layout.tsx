@@ -14,31 +14,31 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sweetex.ai'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vertex-ai.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Sweetex AI — Smart Algorithmic Trading',
+  title: 'Vertex AI — Smart Algorithmic Trading',
   description:
-    'Sweetex AI is an advanced algorithmic trading assistant that helps you trade smarter with automated, data-driven signals. Get free access or buy a direct license today.',
+    'Vertex AI is an advanced algorithmic trading assistant that helps you trade smarter with automated, data-driven signals. Get free access or buy a direct license today.',
   generator: 'iamhear',
   icons: {
-    icon: '/sweetex-logo.jpg',
-    apple: '/sweetex-logo.jpg',
+    icon: '/vertex-logo.png',
+    apple: '/vertex-logo.png',
   },
   openGraph: {
-    title: 'Sweetex AI | Smart Algorithmic Trading',
+    title: 'Vertex AI | Smart Algorithmic Trading',
     description:
-      'Trade smarter with Sweetex AI | automated, data-driven trading signals. Start your trading career today.',
-    images: ['/sweetex-logo.jpg'],
+      'Trade smarter with Vertex AI | automated, data-driven trading signals. Start your trading career today.',
+    images: ['/vertex-logo.png'],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sweetex AI — Smart Algorithmic Trading',
+    title: 'Vertex AI — Smart Algorithmic Trading',
     description:
-      'Trade smarter with Sweetex AI — automated, data-driven trading signals.',
-    images: ['/sweetex-logo.jpg'],
+      'Trade smarter with Vertex AI — automated, data-driven trading signals.',
+    images: ['/vertex-logo.png'],
   },
 }
 

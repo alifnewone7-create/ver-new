@@ -149,7 +149,7 @@ export function TopNav() {
 
   return (
     <header className="sticky top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
-      <div className="border-luxe surface-luxe mx-auto max-w-6xl rounded-2xl shadow-[0_10px_40px_-12px_oklch(0.5_0.2_285_/_0.45)] backdrop-blur-xl">
+      <div className="border-luxe surface-luxe mx-auto max-w-6xl rounded-2xl shadow-[0_10px_40px_-12px_oklch(0.5 0.2 128_/_0.45)] backdrop-blur-xl">
         <nav className="flex items-center justify-between gap-4 px-3 py-2.5 sm:px-5 sm:py-3">
           {/* Mobile: hamburger (left) */}
           <button
@@ -172,14 +172,14 @@ export function TopNav() {
             className="flex items-center gap-2.5 md:gap-3"
           >
             <Image
-              src="/sweetex-logo.jpg"
-              alt="Sweetex AI"
+              src="/vertex-logo.png"
+              alt="Vertex AI"
               width={36}
               height={36}
               className="hidden rounded-xl ring-1 ring-primary/30 md:block"
             />
             <span className="text-lg font-bold tracking-tight md:text-xl">
-                    Sweetex <span className="text-shine">AI</span>
+                    Vertex <span className="text-shine">AI</span>
             </span>
           </Link>
 
@@ -224,7 +224,7 @@ export function TopNav() {
             >
               <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl ring-1 ring-primary/40 transition-transform hover:scale-105 md:hover:scale-100">
                 <Image
-                  src="/sweetex-profile.png"
+                  src="/vertex-profile.png"
                   alt={`${firstName} profile`}
                   width={40}
                   height={40}
@@ -263,7 +263,7 @@ export function TopNav() {
                   <div className="profile-card__header flex items-start justify-between gap-4 border-b border-border/70 px-5 py-4 sm:px-6">
                     <div className="min-w-0">
                       <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
-                        Sweetex account
+                        Vertex account
                       </p>
                       <h2 className="mt-1 text-lg font-bold tracking-tight">
                         Profile details
@@ -283,7 +283,7 @@ export function TopNav() {
                     <section className="profile-card__identity flex items-center gap-4 rounded-2xl p-4 sm:p-5">
                       <span className="profile-card__avatar relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl sm:h-24 sm:w-24">
                         <Image
-                          src="/sweetex-profile.png"
+                          src="/vertex-profile.png"
                           alt={`${firstName} profile`}
                           width={96}
                           height={96}
@@ -377,21 +377,21 @@ export function TopNav() {
             onClick={() => setMenuOpen(false)}
             className="animate-in fade-in fixed inset-0 z-40 cursor-default bg-background/60 backdrop-blur-sm duration-200"
           />
-          <aside className="animate-in slide-in-from-left surface-luxe fixed inset-y-0 left-0 z-50 flex w-[19rem] max-w-[82%] flex-col border-r border-border/60 shadow-[0_0_32px_-14px_oklch(0.5_0.2_285_/_0.3)] backdrop-blur-2xl duration-300">
+          <aside className="animate-in slide-in-from-left surface-luxe fixed inset-y-0 left-0 z-50 flex w-[19rem] max-w-[82%] flex-col border-r border-border/60 shadow-[0_0_32px_-14px_oklch(0.5 0.2 128_/_0.3)] backdrop-blur-2xl duration-300">
             {/* Header with profile */}
             <div className="relative overflow-hidden border-b border-border/60 px-4 pb-4 pt-5">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent" />
               <div className="relative flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <Image
-                    src="/sweetex-logo.jpg"
-                    alt="Sweetex AI"
+                    src="/vertex-logo.png"
+                    alt="Vertex AI"
                     width={38}
                     height={38}
                     className="rounded-xl ring-1 ring-primary/30"
                   />
                   <span className="text-lg font-bold tracking-tight">
-              Sweetex <span className="text-shine">AI</span>
+              Vertex <span className="text-shine">AI</span>
                   </span>
                 </div>
                 <button
@@ -491,7 +491,7 @@ export function TopNav() {
                   id="logout-confirm-title"
                   className="mt-4 text-lg font-bold tracking-tight sm:text-xl"
                 >
-                  Log out of Sweetex AI?
+                  Log out of Vertex AI?
                 </h2>
                 <p className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">
                   You&apos;ll need to sign in again to access your dashboard and

@@ -271,7 +271,7 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
                 </span>
                 <h2 className="mt-3 text-balance text-2xl font-bold tracking-tight sm:text-3xl">
                   Two ways to start with{' '}
-                  <span className="text-gradient">Sweetex AI</span>
+                  <span className="text-gradient">Vertex AI</span>
                 </h2>
                 <p className="mx-auto mt-2 max-w-md text-pretty text-sm text-muted-foreground">
                   Get free access through our partner broker, or buy a direct
@@ -289,7 +289,7 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
                     </span>
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Follow these 3 simple steps to unlock Sweetex AI for free.
+                    Follow these 3 simple steps to unlock Vertex AI for free.
                   </p>
 
                   <ol className="mt-5 flex flex-1 flex-col gap-3">

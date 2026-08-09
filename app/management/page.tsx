@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ManagementView } from '@/components/management-view'
 
 export const metadata: Metadata = {
-  title: 'Management | Sweetex AI',
+  title: 'Management | Vertex AI',
   description: 'Compounding money-management planner with profit target, risk per trade and MTG.',
 }
 

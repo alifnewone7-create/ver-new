@@ -13,8 +13,8 @@ export default function NotFound() {
           {/* Logo */}
           <div className="mb-8 flex justify-center">
             <img
-              src="/sweetex-logo.jpg"
-              alt="Sweetex AI"
+              src="/vertex-logo.png"
+              alt="Vertex AI"
               className="h-16 w-16 rounded-2xl shadow-lg"
             />
           </div>
@@ -35,11 +35,11 @@ export default function NotFound() {
             been moved, deleted, or perhaps you took a wrong turn in the market.
           </p>
 
-          {/* Sweetex branding */}
+          {/* Vertex branding */}
           <div className="mt-16 flex flex-col items-center gap-2">
             <p className="text-xs text-muted-foreground">Powered by</p>
             <p className="font-playfair text-lg font-bold text-foreground">
-              Sweetex <span className="text-accent">AI</span>
+              Vertex <span className="text-accent">AI</span>
             </p>
           </div>
         </div>

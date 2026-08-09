@@ -140,7 +140,7 @@ export async function GET(req: Request) {
     }
 
     const res = await fetch(FEED_URL, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (SweetexAI news signals)' },
+      headers: { 'User-Agent': 'Mozilla/5.0 (VertexAI news signals)' },
       next: { revalidate: FEED_REVALIDATE },
     })
 
