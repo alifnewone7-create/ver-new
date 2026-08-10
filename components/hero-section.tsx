@@ -1,34 +1,44 @@
 import Link from 'next/link'
-import { ArrowUpRight, Activity, Zap, Target } from 'lucide-react'
+import {
+  ArrowUpRight,
+  Activity,
+  Zap,
+  Target,
+  ScanSearch,
+  Radio,
+  Telescope,
+  Newspaper,
+} from 'lucide-react'
+import { AiEngineCard } from '@/components/ai-engine-card'
 
 const HERO_CARDS = [
   {
     title: 'OTC Chart Analyzer',
     desc: 'Upload a chart. Get a verdict in seconds.',
-    img: 'https://images.unsplash.com/photo-1618423644156-1f5226a6c5fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHx0cmFkaW5nJTIwY2hhcnQlMjBkYXJrfGVufDB8fHxibGFja3wxNzg2MzA2OTgwfDA&ixlib=rb-4.1.0&q=85',
     href: '/login',
     tag: 'Vision AI',
+    icon: ScanSearch,
   },
   {
     title: 'Live Signals 24/7',
     desc: 'Round-the-clock entries the moment they appear.',
-    img: 'https://images.unsplash.com/photo-1607799632518-da91dd151b38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHx0cmFkaW5nJTIwY2hhcnQlMjBkYXJrfGVufDB8fHxibGFja3wxNzg2MzA2OTgwfDA&ixlib=rb-4.1.0&q=85',
     href: '/login',
     tag: 'Live',
+    icon: Radio,
   },
   {
     title: 'Future Signals',
     desc: 'Forward-timed setups before the move starts.',
-    img: 'https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwzfHxjcnlwdG8lMjB0cmFkaW5nJTIwc2NyZWVufGVufDB8fHxibGFja3wxNzg2MzA2OTgwfDA&ixlib=rb-4.1.0&q=85',
     href: '/login',
     tag: 'New',
+    icon: Telescope,
   },
   {
     title: 'News Signals',
     desc: 'Fundamental bias from the economic calendar.',
-    img: 'https://images.unsplash.com/photo-1548031061-76f86064a5ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBkYXRhJTIwbmVvbnxlbnwwfHx8YmxhY2t8MTc4NjMwNjk4MHww&ixlib=rb-4.1.0&q=85',
     href: '/login',
     tag: 'Calendar',
+    icon: Newspaper,
   },
 ]
 
@@ -53,9 +63,9 @@ const STATS = [
 
 export function HeroSection() {
   return (
-    <section id="about" className="relative overflow-hidden">
+    <section id="about" className="relative">
       <div className="mx-auto max-w-[1600px] px-3 pt-10 sm:px-6 sm:pt-16">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* copy */}
           <div>
             <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
@@ -107,49 +117,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* visual */}
+          {/* animated engine card (no imagery) */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl border border-border bg-card">
-              <div className="relative aspect-[4/3] w-full sm:aspect-[16/11]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1589560989620-61bf48e97abb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHw0fHxjcnlwdG8lMjB0cmFkaW5nJTIwc2NyZWVufGVufDB8fHxibGFja3wxNzg2MzA2OTgwfDA&ixlib=rb-4.1.0&q=85"
-                  alt="Vertex AI trading terminal"
-                  className="h-full w-full object-cover opacity-70 saturate-[0.55] contrast-125"
-                />
-                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-transparent" />
-
-                {/* floating readout */}
-                <div className="absolute inset-x-3 bottom-3 rounded-xl border border-border bg-background/85 p-3 backdrop-blur-md sm:inset-x-5 sm:bottom-5 sm:p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="status-dot status-dot--up" />
-                      <span className="mono-label">Engine · scanning</span>
-                    </div>
-                    <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">
-                      Live
-                    </span>
-                  </div>
-                  <div className="mt-3 grid grid-cols-3 gap-2 text-center">
-                    <div>
-                      <p className="text-sm font-extrabold text-[var(--up)] sm:text-base">
-                        BUY
-                      </p>
-                      <p className="mono-label mt-0.5">EUR/USD</p>
-                    </div>
-                    <div className="border-x border-border">
-                      <p className="text-sm font-extrabold sm:text-base">92%</p>
-                      <p className="mono-label mt-0.5">Confidence</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-extrabold sm:text-base">5M</p>
-                      <p className="mono-label mt-0.5">Expiry</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <AiEngineCard />
           </div>
         </div>
       </div>
@@ -169,37 +139,32 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* card rail */}
+      {/* minimal tool rail */}
       <div className="mx-auto max-w-[1600px] px-3 py-6 sm:px-6 sm:py-8">
         <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-4">
           {HERO_CARDS.map((c) => (
             <Link
               key={c.title}
               href={c.href}
-              className="group w-[78vw] shrink-0 snap-start sm:w-auto"
+              className="group flex w-[78vw] shrink-0 snap-start flex-col justify-between rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/50 sm:w-auto"
             >
-              <div className="relative overflow-hidden rounded-xl border border-border bg-card transition-colors group-hover:border-primary/50">
-                <div className="relative aspect-[16/10] w-full">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={c.img}
-                    alt={c.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover opacity-75 saturate-[0.5] contrast-125 transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-                  <span className="absolute left-3 top-3 rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary-foreground">
-                    {c.tag}
-                  </span>
-                </div>
+              <div className="flex items-start justify-between">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/12 text-primary ring-1 ring-primary/25">
+                  <c.icon className="h-5 w-5" />
+                </span>
+                <span className="rounded-full border border-border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
+                  {c.tag}
+                </span>
               </div>
-              <h3 className="mt-3 text-[13px] font-extrabold uppercase tracking-tight transition-colors group-hover:text-primary">
-                {c.title}
-              </h3>
-              <p className="mt-1 text-[13px] leading-snug text-muted-foreground">
-                {c.desc}
-              </p>
+              <div className="mt-8">
+                <h3 className="flex items-center gap-1.5 text-[13px] font-extrabold uppercase tracking-tight transition-colors group-hover:text-primary">
+                  {c.title}
+                  <ArrowUpRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100" />
+                </h3>
+                <p className="mt-1.5 text-[13px] leading-snug text-muted-foreground">
+                  {c.desc}
+                </p>
+              </div>
             </Link>
           ))}
         </div>

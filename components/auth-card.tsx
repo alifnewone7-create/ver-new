@@ -15,6 +15,7 @@ import {
   ArrowUpRight,
   ArrowLeft,
 } from 'lucide-react'
+import { StarField } from '@/components/star-field'
 import { useAuth } from '@/components/auth-provider'
 import { cn } from '@/lib/utils'
 
@@ -236,17 +237,13 @@ const brandPoints = [
 
 export function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="grid min-h-dvh grid-cols-1 bg-background lg:grid-cols-[1.05fr_1fr]">
+    <main className="relative grid min-h-dvh grid-cols-1 bg-background lg:grid-cols-[1.05fr_1fr]">
+      <StarField />
       {/* Brand panel */}
-      <aside className="relative hidden flex-col justify-between overflow-hidden border-r border-border p-10 xl:p-14 lg:flex">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://images.unsplash.com/photo-1607799632518-da91dd151b38?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHx0cmFkaW5nJTIwY2hhcnQlMjBkYXJrfGVufDB8fHxibGFja3wxNzg2MzA2OTgwfDA&ixlib=rb-4.1.0&q=85"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-35 saturate-[0.45] contrast-125"
-        />
-        <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/50" />
+      <aside className="relative z-10 hidden flex-col justify-between overflow-hidden border-r border-border p-10 xl:p-14 lg:flex">
+        <div className="tech-grid pointer-events-none absolute inset-0 opacity-50" />
+        <div className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 right-0 h-64 w-64 rounded-full bg-primary/8 blur-3xl" />
 
         <Link href="/" className="relative flex items-center gap-3">
           <span className="relative h-10 w-10 overflow-hidden rounded-lg ring-1 ring-white/15">
@@ -293,7 +290,7 @@ export function AuthLayout({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Form panel */}
-      <div className="relative flex flex-col items-center justify-center px-4 py-10 sm:px-6">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 py-10 sm:px-6">
         <Link
           href="/"
           className="absolute left-4 top-5 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-muted-foreground transition-colors hover:text-primary sm:left-6"

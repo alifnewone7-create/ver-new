@@ -353,3 +353,19 @@ backend:
         - working: true
           agent: "testing"
           comment: "✅ INPUT VALIDATION WORKING CORRECTLY. POST /api/analyze without image returns 400 with error 'No image provided.' This is correct validation behavior. Did not test with actual image to avoid burning Groq API quota. The endpoint structure and validation are working as expected."
+
+## UPDATE 3 — All imagery removed, minimal design restored (frontend only, no backend changes)
+agent_communication:
+    - agent: "main"
+      message: |
+        Removed every photographic image (all 8 unsplash <img> usages) from
+        components/hero-section.tsx, components/feature-grid.tsx and components/auth-card.tsx.
+        Replaced with the repo's original minimal CSS/SVG visuals:
+          - hero right column -> <AiEngineCard /> (animated 3D cube, existing component)
+          - hero tool rail -> minimal icon tiles (no covers)
+          - feature banners -> tech-grid texture + corner-frame + lime glow + readout chips
+          - engine banner -> CSS "engine feed" table (pair / direction / confidence)
+          - auth layout -> StarField + subtle glow instead of photo
+        <StarField /> restored on the landing page and auth pages.
+        Verified: / , /login , /registration all 200 and render correctly on 1440px and 390px.
+        grep for "unsplash" now returns 0 matches. Backend untouched in this round.
