@@ -369,3 +369,27 @@ agent_communication:
         <StarField /> restored on the landing page and auth pages.
         Verified: / , /login , /registration all 200 and render correctly on 1440px and 390px.
         grep for "unsplash" now returns 0 matches. Backend untouched in this round.
+
+## UPDATE 4 — Original design restored + NEW green-gradient theme
+agent_communication:
+    - agent: "main"
+      message: |
+        User asked for the ORIGINAL (pre-redesign) layout back, but with a NEW theme keeping
+        gradient colour grading. Actions:
+        1) Restored from upstream repo: app/globals.css, all components/*.tsx, components/admin/*.tsx,
+           app/page.tsx, app/layout.tsx, app/login/page.tsx, app/registration/page.tsx,
+           app/not-found.tsx, app/privacy/page.tsx  (higgsfield flat redesign fully reverted).
+           NOT restored (intentionally kept): lib/firebase.ts, lib/server/firebase-admin.ts,
+           next.config.mjs (allowedDevOrigins), firebase-database-rules.json.
+        2) Re-applied the Vertex AI rebrand + /vertex-logo.png paths.
+        3) NEW THEME: every hard-coded oklch hue in the 228-335 (violet/blue) band shifted -120deg
+           across globals.css and all tsx, so the whole gradient system becomes green:
+           primary 280->158 (emerald), accent 255->135 (lime), ink base 274->154, gradient stop 290->170.
+           Tuned primary to oklch(0.67 0.22 158) with near-black foreground, accent oklch(0.82 0.19 132),
+           up oklch(0.84 0.21 142). Layered radial-gradient body background retained (gradient grading).
+        4) components/tool-cards.tsx hue trio changed 285/165/88 -> 158/134/184 (emerald/lime/teal).
+        5) site-footer CTA now links to /registration instead of the dead external console URL.
+        Verified: / /login /registration /privacy /secret-portal-sx all 200; login -> dashboard flow
+        works on the preview URL (premium tier, 50/tool). Only remaining console noise is the
+        pre-existing upstream Base UI dev warning about <Button render={<Link/>}> (dev-only, harmless).
+        Backend untouched this round.

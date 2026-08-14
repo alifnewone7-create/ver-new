@@ -282,7 +282,7 @@ export function ChartAnalyzer({ mode }: { mode: AnalyzerMode }) {
       ) : (
         <section className="border-luxe surface-luxe card-corner-glow relative overflow-hidden rounded-3xl">
           {/* Terminal-style header, flush with the top of the card */}
-          <div className="relative z-10 flex items-center gap-2 border-b border-[oklch(0.7 0.16 128_/_0.55)] px-5 py-3 sm:px-6">
+          <div className="relative z-10 flex items-center gap-2 border-b border-[oklch(0.7_0.16_135_/_0.55)] px-5 py-3 sm:px-6">
             {mode === 'real' ? (
               <>
                 <span

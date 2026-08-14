@@ -1,72 +1,64 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { AlertTriangle, ArrowUpRight } from 'lucide-react'
+import { Brain, AlertTriangle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const FOOTER_LINKS = [
   { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Login', href: '/login' },
-  { label: 'Register', href: '/registration' },
   { label: 'Support', href: 'https://t.me/Ayan_sx', external: true },
 ]
 
 export function SiteFooter() {
   return (
-    <footer id="support" className="scroll-mt-16">
-      {/* Lime CTA band */}
-      <div className="mx-auto max-w-[1600px] px-3 pb-10 sm:px-6 sm:pb-16">
-        <div className="relative overflow-hidden rounded-2xl bg-primary px-5 py-10 text-primary-foreground sm:px-10 sm:py-14">
+    <footer id="support" className="relative scroll-mt-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* CTA card sitting above the footer */}
+        <div className="surface-luxe relative mb-12 overflow-hidden rounded-3xl border border-primary/40 p-8 text-center shadow-2xl shadow-primary/15 sm:p-12">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-1/2 top-0 h-56 w-56 -translate-x-1/2 rounded-full bg-primary/25 blur-[90px]" />
+            <div className="absolute bottom-0 right-10 h-44 w-44 rounded-full bg-accent/15 blur-[80px]" />
+          </div>
           <div className="relative">
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] opacity-70">
-              Start today
-            </p>
-            <h2 className="mt-3 max-w-2xl text-balance text-3xl font-extrabold uppercase leading-[0.92] tracking-[-0.03em] sm:text-5xl">
-              Your trading career
-              <br />
-              starts with Vertex AI
+            <h2 className="text-balance text-2xl font-bold tracking-tight sm:text-3xl">
+              Start your trading career with{' '}
+              <span className="text-gradient">Vertex AI</span>
             </h2>
-            <p className="mt-4 max-w-lg text-[14px] font-medium leading-relaxed opacity-80">
-              Thousands of traders use automated, data-driven signals to trade
-              with confidence — every single day.
+            <p className="mx-auto mt-3 max-w-lg text-pretty text-muted-foreground">
+              Join thousands of traders using automated, data-driven signals to trade with
+              confidence — every single day.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/registration"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary-foreground px-7 text-[12px] font-bold uppercase tracking-wide text-primary transition-transform hover:scale-[1.02]"
-              >
-                Create free account
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-              <a
-                href="https://t.me/Ayan_sx"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-primary-foreground/30 px-7 text-[12px] font-bold uppercase tracking-wide transition-colors hover:bg-primary-foreground/10"
-              >
-                Talk to admin
-              </a>
-            </div>
+            <Button
+              render={<Link href="/registration" />}
+              className="btn-luxe mt-7 h-12 gap-2 rounded-xl px-8 text-base font-semibold"
+            >
+              <Brain className="icon-pulse-soft h-[18px] w-[18px]" />
+              Get Vertex AI
+            </Button>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-border bg-card/30">
-        <div className="mx-auto max-w-[1600px] px-3 sm:px-6">
-          <div className="flex flex-col items-center gap-6 py-8 text-center md:flex-row md:justify-between md:text-left">
-            <Link href="/#top" className="flex items-center gap-2.5">
-              <span className="relative h-8 w-8 overflow-hidden rounded-md ring-1 ring-white/15">
+      {/* footer body */}
+      <div className="bg-popover">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center gap-6 border-t border-border pb-8 pt-8 text-center md:flex-row md:justify-between md:pt-10 md:text-left">
+            {/* logo + name */}
+            <a href="/#top" className="flex items-center gap-2.5">
+              <span className="relative h-9 w-9 overflow-hidden rounded-lg ring-1 ring-border">
                 <Image
                   src="/vertex-logo.png"
                   alt="Vertex AI logo"
                   fill
-                  sizes="32px"
                   className="object-cover"
+                  sizes="36px"
                 />
               </span>
-              <span className="text-[15px] font-extrabold uppercase tracking-tight">
-                Vertex <span className="text-primary">AI</span>
+              <span className="text-lg font-bold tracking-tight">
+                Vertex <span className="text-shine">AI</span>
               </span>
-            </Link>
+            </a>
 
+            {/* links */}
             <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {FOOTER_LINKS.map((link) => (
                 <a
@@ -74,7 +66,7 @@ export function SiteFooter() {
                   href={link.href}
                   target={link.external ? '_blank' : undefined}
                   rel={link.external ? 'noopener noreferrer' : undefined}
-                  className="text-[13px] font-medium text-muted-foreground transition-colors hover:text-primary"
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </a>
@@ -82,24 +74,21 @@ export function SiteFooter() {
             </nav>
           </div>
 
+          {/* risk disclaimer */}
           <div className="border-t border-border py-6">
-            <div className="flex gap-3 rounded-xl border border-[var(--down)]/25 bg-[var(--down)]/5 p-4">
-              <AlertTriangle className="h-4 w-4 shrink-0 text-[var(--down)]" />
-              <p className="text-[11px] leading-relaxed text-muted-foreground">
-                <span className="font-bold uppercase text-foreground">
-                  Trading risk disclaimer:
-                </span>{' '}
-                Trading financial instruments carries a high level of risk and
-                may not be suitable for all investors. Leverage can work against
-                you as well as for you. Past performance of Vertex AI is not
-                indicative of future results. Never trade with money you cannot
-                afford to lose. Vertex AI provides tools and signals for
-                informational purposes only and does not constitute financial
-                advice.
+            <div className="flex gap-3 rounded-2xl border border-[var(--down)]/30 bg-[var(--down)]/5 p-4">
+              <AlertTriangle className="h-5 w-5 shrink-0 text-[var(--down)]" />
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                <span className="font-semibold text-foreground">Trading Risk Disclaimer:</span>{' '}
+                Trading financial instruments carries a high level of risk and may not be suitable
+                for all investors. The high degree of leverage can work against you as well as for
+                you. Past performance of Vertex AI is not indicative of future results. You should
+                never trade with money you cannot afford to lose. Vertex AI provides tools and
+                signals for informational purposes only and does not constitute financial advice.
               </p>
             </div>
-            <p className="mono-label mt-6 text-center">
-              © {new Date().getFullYear()} Vertex AI — All rights reserved
+            <p className="mt-6 text-center text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Vertex AI. All rights reserved.
             </p>
           </div>
         </div>

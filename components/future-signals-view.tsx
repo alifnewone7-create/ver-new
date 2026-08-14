@@ -574,9 +574,9 @@ function SignalTerminal({ phase, signals }: { phase: Phase; signals: Signal[] })
   }, [visibleLines, phase])
 
   return (
-    <section className="border-luxe animate-in fade-in slide-in-from-bottom-3 overflow-hidden rounded-3xl bg-[oklch(0.13 0.03 128)] duration-500">
+    <section className="border-luxe animate-in fade-in slide-in-from-bottom-3 overflow-hidden rounded-3xl bg-[oklch(0.13_0.03_160)] duration-500">
       {/* terminal top bar */}
-      <div className="flex items-center gap-2 border-b border-border/60 bg-[oklch(0.17 0.035 128)] px-4 py-3">
+      <div className="flex items-center gap-2 border-b border-border/60 bg-[oklch(0.17_0.035_158)] px-4 py-3">
         <span className="h-3 w-3 rounded-full bg-destructive/70" />
         <span className="h-3 w-3 rounded-full bg-[var(--gold)]/70" />
         <span className="h-3 w-3 rounded-full bg-up/70" />

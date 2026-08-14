@@ -4,17 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import {
-  Lock,
-  Mail,
-  User,
-  Eye,
-  EyeOff,
-  Check,
-  Loader2,
-  ArrowUpRight,
-  ArrowLeft,
-} from 'lucide-react'
+import { Lock, Mail, User, Eye, EyeOff, Check, Loader2 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { StarField } from '@/components/star-field'
 import { useAuth } from '@/components/auth-provider'
 import { cn } from '@/lib/utils'
@@ -40,16 +31,16 @@ function friendlyError(code: string): string {
 
 type AuthMode = 'login' | 'registration'
 
-const inputClass =
-  'h-12 w-full rounded-xl border border-border bg-background pl-11 pr-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary/70 focus:ring-2 focus:ring-primary/25'
-
 function FieldIcon({ children }: { children: React.ReactNode }) {
   return (
-    <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground">
+    <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
       {children}
     </span>
   )
 }
+
+const inputClass =
+  'h-12 w-full rounded-xl border border-border bg-input/40 pl-10 pr-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/40'
 
 export function AuthCard({ mode }: { mode: AuthMode }) {
   const router = useRouter()
@@ -65,6 +56,7 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
+
     setSubmitting(true)
     try {
       if (isLogin) {
@@ -84,16 +76,19 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
   }
 
   return (
-    <div className="auth-card-enter w-full max-w-md rounded-2xl border border-border bg-card p-5 sm:p-8">
-      {/* Segmented switcher */}
-      <div className="grid grid-cols-2 gap-1 rounded-full border border-border bg-background p-1">
+    <div className="auth-card-enter border-luxe surface-luxe card-corner-glow relative w-full max-w-md rounded-3xl p-6 shadow-2xl sm:p-8">
+      {/* Tabs */}
+      <div
+        className="auth-rise relative z-10 grid grid-cols-2 gap-1 rounded-xl border border-border bg-input/30 p-1"
+        style={{ '--rise-delay': '80ms' } as React.CSSProperties}
+      >
         <Link
           href="/login"
           aria-current={isLogin ? 'page' : undefined}
           className={cn(
-            'flex h-9 items-center justify-center rounded-full text-[12px] font-bold uppercase tracking-wide transition-colors',
+            'flex h-10 items-center justify-center rounded-lg text-sm font-semibold transition-colors',
             isLogin
-              ? 'bg-primary text-primary-foreground'
+              ? 'btn-luxe text-primary-foreground'
               : 'text-muted-foreground hover:text-foreground',
           )}
         >
@@ -103,33 +98,41 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
           href="/registration"
           aria-current={!isLogin ? 'page' : undefined}
           className={cn(
-            'flex h-9 items-center justify-center rounded-full text-[12px] font-bold uppercase tracking-wide transition-colors',
+            'flex h-10 items-center justify-center rounded-lg text-sm font-semibold transition-colors',
             !isLogin
-              ? 'bg-primary text-primary-foreground'
+              ? 'btn-luxe text-primary-foreground'
               : 'text-muted-foreground hover:text-foreground',
           )}
         >
-          Register
+          Registration
         </Link>
       </div>
 
-      <div className="mt-7">
-        <span className="mono-label text-primary">
-          {isLogin ? 'Secure sign in' : 'New account'}
-        </span>
-        <h1 className="mt-2 text-2xl font-extrabold uppercase leading-[0.95] tracking-[-0.02em] sm:text-3xl">
+      {/* Heading */}
+      <div
+        className="auth-rise relative z-10 mt-6 text-center"
+        style={{ '--rise-delay': '150ms' } as React.CSSProperties}
+      >
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
           {isLogin ? 'Welcome back' : 'Create your account'}
         </h1>
-        <p className="mt-2.5 text-[13px] leading-relaxed text-muted-foreground">
+        <p className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">
           {isLogin
-            ? 'Sign in to open your Vertex AI trading terminal.'
+            ? 'Sign in to access your Vertex AI trading dashboard.'
             : 'Join Vertex AI and start trading with automated signals.'}
         </p>
       </div>
 
-      <form className="mt-7 flex flex-col gap-3" onSubmit={handleSubmit}>
+      {/* Form */}
+      <form
+        className="relative z-10 mt-7 flex flex-col gap-4"
+        onSubmit={handleSubmit}
+      >
         {!isLogin && (
-          <div className="relative">
+          <div
+            className="auth-rise relative"
+            style={{ '--rise-delay': '210ms' } as React.CSSProperties}
+          >
             <FieldIcon>
               <User className="h-[18px] w-[18px]" />
             </FieldIcon>
@@ -146,7 +149,10 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
           </div>
         )}
 
-        <div className="relative">
+        <div
+          className="auth-rise relative"
+          style={{ '--rise-delay': '270ms' } as React.CSSProperties}
+        >
           <FieldIcon>
             <Mail className="h-[18px] w-[18px]" />
           </FieldIcon>
@@ -162,7 +168,10 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
           />
         </div>
 
-        <div className="relative">
+        <div
+          className="auth-rise relative"
+          style={{ '--rise-delay': '330ms' } as React.CSSProperties}
+        >
           <FieldIcon>
             <Lock className="h-[18px] w-[18px]" />
           </FieldIcon>
@@ -180,7 +189,7 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
             type="button"
             onClick={() => setShowPassword((v) => !v)}
             aria-label={showPassword ? 'Hide password' : 'Show password'}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-primary"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
           >
             {showPassword ? (
               <EyeOff className="h-[18px] w-[18px]" />
@@ -193,16 +202,17 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
         {error && (
           <p
             role="alert"
-            className="rounded-xl border border-destructive/40 bg-destructive/10 px-3 py-2.5 text-[13px] text-destructive"
+            className="rounded-xl border border-destructive/40 bg-destructive/10 px-3 py-2.5 text-sm text-destructive"
           >
             {error}
           </p>
         )}
 
-        <button
+        <Button
           type="submit"
           disabled={submitting}
-          className="mt-2 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-[12px] font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.01] disabled:opacity-70"
+          className="btn-luxe auth-rise mt-1 h-12 w-full gap-2 rounded-xl text-base font-semibold disabled:opacity-70"
+          style={{ '--rise-delay': '440ms' } as React.CSSProperties}
         >
           {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
           {submitting
@@ -212,17 +222,20 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
             : isLogin
               ? 'Sign in'
               : 'Create account'}
-          {!submitting && <ArrowUpRight className="h-4 w-4" />}
-        </button>
+        </Button>
       </form>
 
-      <p className="mt-6 text-center text-[13px] text-muted-foreground">
+      {/* Footer switch */}
+      <p
+        className="auth-rise relative z-10 mt-6 text-center text-sm text-muted-foreground"
+        style={{ '--rise-delay': '500ms' } as React.CSSProperties}
+      >
         {isLogin ? "Don't have an account? " : 'Already have an account? '}
         <Link
           href={isLogin ? '/registration' : '/login'}
-          className="font-bold uppercase tracking-wide text-primary transition-opacity hover:opacity-80"
+          className="font-semibold text-accent transition-colors hover:text-foreground"
         >
-          {isLogin ? 'Register' : 'Sign in'}
+          {isLogin ? 'Register now' : 'Sign in'}
         </Link>
       </p>
     </div>
@@ -230,53 +243,41 @@ export function AuthCard({ mode }: { mode: AuthMode }) {
 }
 
 const brandPoints = [
-  'Automated AI trading signals, delivered in real time',
-  'Chart verdicts in under two seconds',
-  'Forex, OTC, crypto and metals in one engine',
+  'Automated AI trading signals in real time',
+  'AI that analyzes markets faster than you can blink',
+  'Trusted by traders worldwide',
 ]
 
 export function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="relative grid min-h-dvh grid-cols-1 bg-background lg:grid-cols-[1.05fr_1fr]">
+    <main className="relative grid min-h-dvh grid-cols-1 bg-background lg:grid-cols-2">
       <StarField />
-      {/* Brand panel */}
-      <aside className="relative z-10 hidden flex-col justify-between overflow-hidden border-r border-border p-10 xl:p-14 lg:flex">
-        <div className="tech-grid pointer-events-none absolute inset-0 opacity-50" />
-        <div className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 right-0 h-64 w-64 rounded-full bg-primary/8 blur-3xl" />
-
-        <Link href="/" className="relative flex items-center gap-3">
-          <span className="relative h-10 w-10 overflow-hidden rounded-lg ring-1 ring-white/15">
-            <Image
-              src="/vertex-logo.png"
-              alt="Vertex AI"
-              fill
-              sizes="40px"
-              className="object-cover"
-              priority
-            />
-          </span>
-          <span className="text-lg font-extrabold uppercase tracking-tight">
-            Vertex <span className="text-primary">AI</span>
+      {/* Branding panel - visible on large screens */}
+      <aside className="relative z-10 hidden flex-col justify-between border-r border-border p-10 xl:p-14 lg:flex">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/vertex-logo.png"
+            alt="Vertex AI"
+            width={44}
+            height={44}
+            className="rounded-xl"
+          />
+          <span className="text-xl font-bold tracking-tight">
+            Vertex <span className="text-shine">AI</span>
           </span>
         </Link>
 
-        <div className="relative max-w-lg">
-          <span className="mono-label text-primary">Algorithmic trading</span>
-          <h2 className="mt-3 text-balance text-4xl font-extrabold uppercase leading-[0.92] tracking-[-0.03em] xl:text-5xl">
-            Trade smarter
-            <br />
-            with AI powered
-            <br />
-            <span className="text-primary">signals.</span>
+        <div className="max-w-md">
+          <h2 className="text-balance text-4xl font-bold leading-tight tracking-tight xl:text-5xl">
+            Trade smarter with AI powered signals.
           </h2>
-          <ul className="mt-9 flex flex-col gap-3.5">
+          <ul className="mt-8 flex flex-col gap-4">
             {brandPoints.map((point) => (
               <li key={point} className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Check className="h-3 w-3" />
+                <span className="btn-luxe mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                  <Check className="h-3.5 w-3.5 text-primary-foreground" />
                 </span>
-                <span className="text-[13px] leading-relaxed text-muted-foreground">
+                <span className="text-pretty text-sm leading-relaxed text-muted-foreground">
                   {point}
                 </span>
               </li>
@@ -284,40 +285,34 @@ export function AuthLayout({ children }: { children: React.ReactNode }) {
           </ul>
         </div>
 
-        <p className="mono-label relative">
-          © {new Date().getFullYear()} Vertex AI
+        <p className="text-xs text-muted-foreground">
+          {'© '}
+          {new Date().getFullYear()} Vertex AI. All rights reserved.
         </p>
       </aside>
 
       {/* Form panel */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-4 py-10 sm:px-6">
-        <Link
-          href="/"
-          className="absolute left-4 top-5 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-muted-foreground transition-colors hover:text-primary sm:left-6"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          Home
-        </Link>
-
-        <div className="mb-8 flex flex-col items-center gap-3 lg:hidden">
-          <Link href="/" className="relative">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 py-12 sm:px-6">
+        <div className="auth-logo-enter relative z-10 mb-8 flex flex-col items-center gap-3 lg:hidden">
+          <Link href="/" className="relative flex items-center justify-center">
+            <span className="auth-logo-glow" aria-hidden="true" />
             <Image
               src="/vertex-logo.png"
               alt="Vertex AI"
-              width={60}
-              height={60}
-              className="rounded-xl ring-1 ring-white/15"
-              priority
+              width={64}
+              height={64}
+              className="rounded-2xl shadow-xl ring-1 ring-white/15"
             />
           </Link>
           <div className="text-center">
-            <span className="text-xl font-extrabold uppercase tracking-tight">
-              Vertex <span className="text-primary">AI</span>
+            <span className="text-2xl font-bold tracking-tight">
+              Vertex <span className="text-shine">AI</span>
             </span>
-            <p className="mono-label mt-1.5">AI trading, made effortless</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              AI-powered trading, made effortless.
+            </p>
           </div>
         </div>
-
         {children}
       </div>
     </main>

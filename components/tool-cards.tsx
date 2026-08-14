@@ -23,10 +23,10 @@ type Tool = {
   chroma: number
 }
 
-/* Acid-lime main + mint & chartreuse secondaries */
-const PURPLE = { hue: 128, chroma: 0.22 }
-const EMERALD = { hue: 152, chroma: 0.17 }
-const GOLD = { hue: 108, chroma: 0.2 }
+/* Green gradient family — emerald main + lime & teal secondaries */
+const PURPLE = { hue: 158, chroma: 0.2 }
+const EMERALD = { hue: 134, chroma: 0.18 }
+const GOLD = { hue: 184, chroma: 0.13 }
 
 const tools: Tool[] = [
   {
@@ -75,9 +75,9 @@ const tools: Tool[] = [
 
 function ToolCard({ tool, index }: { tool: Tool; index: number }) {
   const { hue, chroma } = tool
-  const base = `oklch(0.72 ${chroma} ${hue})`
+  const base = `oklch(0.62 ${chroma} ${hue})`
   const light = `oklch(0.78 ${chroma * 0.8} ${hue})`
-  const dark = `oklch(0.45 ${chroma * 0.85} ${hue})`
+  const dark = `oklch(0.4 ${chroma * 0.85} ${hue})`
   const glow = `oklch(0.62 ${chroma} ${hue} / 0.55)`
   const glowSoft = `oklch(0.62 ${chroma} ${hue} / 0.14)`
 
@@ -94,7 +94,7 @@ function ToolCard({ tool, index }: { tool: Tool; index: number }) {
           animationDelay: `${index * 80}ms`,
         } as React.CSSProperties
       }
-      className="group animate-in fade-in slide-in-from-bottom-3 relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[color:var(--c-glow-soft)] bg-[oklch(0.19 0.04 128)] p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-[color:var(--c-glow)] hover:shadow-[0_18px_45px_-22px_var(--c-glow)] sm:p-5"
+      className="group animate-in fade-in slide-in-from-bottom-3 relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[color:var(--c-glow-soft)] bg-[oklch(0.19_0.04_154)] p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-[color:var(--c-glow)] hover:shadow-[0_18px_45px_-22px_var(--c-glow)] sm:p-5"
     >
       {/* left accent bar that lights up on hover */}
       <span

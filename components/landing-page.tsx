@@ -1,6 +1,6 @@
 import { SiteNavbar } from '@/components/site-navbar'
 import { HeroSection } from '@/components/hero-section'
-import { FeatureGrid, EngineBanner } from '@/components/feature-grid'
+import { FeatureGrid } from '@/components/feature-grid'
 import { PricingTiers } from '@/components/pricing-tiers'
 import { SiteFooter } from '@/components/site-footer'
 import { StarField } from '@/components/star-field'
@@ -14,7 +14,6 @@ export function LandingPage() {
         <main>
           <HeroSection />
           <FeatureGrid />
-          <EngineBanner />
           <PricingTiers />
         </main>
         <SiteFooter />

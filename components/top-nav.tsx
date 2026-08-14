@@ -149,7 +149,7 @@ export function TopNav() {
 
   return (
     <header className="sticky top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
-      <div className="border-luxe surface-luxe mx-auto max-w-6xl rounded-2xl shadow-[0_10px_40px_-12px_oklch(0.5 0.2 128_/_0.45)] backdrop-blur-xl">
+      <div className="border-luxe surface-luxe mx-auto max-w-6xl rounded-2xl shadow-[0_10px_40px_-12px_oklch(0.5_0.2_165_/_0.45)] backdrop-blur-xl">
         <nav className="flex items-center justify-between gap-4 px-3 py-2.5 sm:px-5 sm:py-3">
           {/* Mobile: hamburger (left) */}
           <button
@@ -377,7 +377,7 @@ export function TopNav() {
             onClick={() => setMenuOpen(false)}
             className="animate-in fade-in fixed inset-0 z-40 cursor-default bg-background/60 backdrop-blur-sm duration-200"
           />
-          <aside className="animate-in slide-in-from-left surface-luxe fixed inset-y-0 left-0 z-50 flex w-[19rem] max-w-[82%] flex-col border-r border-border/60 shadow-[0_0_32px_-14px_oklch(0.5 0.2 128_/_0.3)] backdrop-blur-2xl duration-300">
+          <aside className="animate-in slide-in-from-left surface-luxe fixed inset-y-0 left-0 z-50 flex w-[19rem] max-w-[82%] flex-col border-r border-border/60 shadow-[0_0_32px_-14px_oklch(0.5_0.2_165_/_0.3)] backdrop-blur-2xl duration-300">
             {/* Header with profile */}
             <div className="relative overflow-hidden border-b border-border/60 px-4 pb-4 pt-5">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent" />
