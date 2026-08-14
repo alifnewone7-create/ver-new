@@ -523,7 +523,7 @@ function RejectPopup({
               'flex h-16 w-16 items-center justify-center rounded-2xl',
               isOtc
                 ? 'bg-destructive/15 text-destructive'
-                : 'bg-gold/15 text-gold',
+                : 'bg-gold/12 text-gold',
             )}
           >
             <Icon className="icon-pulse-soft h-8 w-8" />
@@ -584,7 +584,7 @@ function ResultBlock({ result }: { result: AnalysisResult }) {
               {hasFlags ? (
                 <PairFlags base={base} quote={quote} size={30} />
               ) : (
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-accent/15">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-accent/12">
                   <TrendingUp className="h-5 w-5 text-accent" />
                 </span>
               )}
@@ -769,12 +769,12 @@ function ResultBlock({ result }: { result: AnalysisResult }) {
             <button
               type="button"
               onClick={() => setDetailsOpen(true)}
-              className="animate-in fade-in slide-in-from-bottom-2 fill-mode-both group relative flex w-full items-center justify-between gap-4 overflow-hidden rounded-2xl border border-primary/35 bg-gradient-to-br from-primary/18 via-primary/8 to-transparent p-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all delay-[440ms] duration-300 hover:-translate-y-0.5 hover:border-primary/55 hover:from-primary/28 hover:via-primary/12"
+              className="animate-in fade-in slide-in-from-bottom-2 fill-mode-both group relative flex w-full items-center justify-between gap-4 overflow-hidden rounded-2xl border border-primary/35 bg-gradient-to-br from-primary/12 via-primary/8 to-transparent p-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all delay-[440ms] duration-300 hover:-translate-y-0.5 hover:border-primary/55 hover:from-primary/12 hover:via-primary/12"
               aria-haspopup="dialog"
             >
-              <span className="pointer-events-none absolute -right-8 -top-10 h-24 w-24 rounded-full bg-primary/25 blur-2xl transition-opacity duration-300 group-hover:opacity-80" />
+              <span className="pointer-events-none absolute -right-8 -top-10 h-24 w-24 rounded-full bg-primary/12 blur-2xl transition-opacity duration-300 group-hover:opacity-80" />
               <span className="relative flex min-w-0 items-center gap-3">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-primary/35 bg-gradient-to-br from-primary/40 via-primary/18 to-primary/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.14)]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-primary/35 bg-gradient-to-br from-primary/40 via-primary/12 to-primary/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.14)]">
                   <Gauge className="icon-float h-5 w-5 text-primary" />
                 </span>
                 <span className="min-w-0">
@@ -784,7 +784,7 @@ function ResultBlock({ result }: { result: AnalysisResult }) {
                   </span>
                 </span>
               </span>
-              <span className="relative flex shrink-0 items-center gap-1.5 rounded-full border border-primary/35 bg-gradient-to-r from-primary/25 to-primary/12 px-3 py-1.5 text-xs font-semibold text-primary transition-all group-hover:from-primary/35 group-hover:to-primary/20">
+              <span className="relative flex shrink-0 items-center gap-1.5 rounded-full border border-primary/35 bg-gradient-to-r from-primary/12 to-primary/12 px-3 py-1.5 text-xs font-semibold text-primary transition-all group-hover:from-primary/35 group-hover:to-primary/12">
                 See all
                 <ChevronRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
               </span>
@@ -1018,13 +1018,13 @@ function IndicatorsCard({ raw }: { raw?: string }) {
 
 const statTileTones = {
   emerald: {
-    card: 'border-emerald/25 from-emerald/15 via-emerald/5 hover:border-emerald/45 hover:from-emerald/25 hover:via-emerald/10',
-    chip: 'border-emerald/25 from-emerald/30 via-emerald/15 to-emerald/5',
+    card: 'border-emerald/25 from-emerald/12 via-emerald/5 hover:border-emerald/45 hover:from-emerald/12 hover:via-emerald/10',
+    chip: 'border-emerald/25 from-emerald/30 via-emerald/12 to-emerald/5',
     icon: 'text-emerald',
   },
   gold: {
-    card: 'border-gold/25 from-gold/15 via-gold/5 hover:border-gold/45 hover:from-gold/25 hover:via-gold/10',
-    chip: 'border-gold/25 from-gold/30 via-gold/15 to-gold/5',
+    card: 'border-gold/25 from-gold/12 via-gold/5 hover:border-gold/45 hover:from-gold/12 hover:via-gold/10',
+    chip: 'border-gold/25 from-gold/30 via-gold/12 to-gold/5',
     icon: 'text-gold',
   },
 } as const

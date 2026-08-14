@@ -15,8 +15,8 @@ export function SiteFooter() {
         {/* CTA card sitting above the footer */}
         <div className="surface-luxe relative mb-12 overflow-hidden rounded-3xl border border-primary/40 p-8 text-center shadow-2xl shadow-primary/15 sm:p-12">
           <div className="pointer-events-none absolute inset-0">
-            <div className="absolute left-1/2 top-0 h-56 w-56 -translate-x-1/2 rounded-full bg-primary/25 blur-[90px]" />
-            <div className="absolute bottom-0 right-10 h-44 w-44 rounded-full bg-accent/15 blur-[80px]" />
+            <div className="absolute left-1/2 top-0 h-56 w-56 -translate-x-1/2 rounded-full bg-primary/12 blur-[90px]" />
+            <div className="absolute bottom-0 right-10 h-44 w-44 rounded-full bg-accent/12 blur-[80px]" />
           </div>
           <div className="relative">
             <h2 className="text-balance text-2xl font-bold tracking-tight sm:text-3xl">

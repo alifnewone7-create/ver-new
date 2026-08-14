@@ -60,7 +60,7 @@ export function PricingTiers() {
             <ol className="mt-6 flex flex-1 flex-col gap-4">
               {FREE_STEPS.map((step, i) => (
                 <li key={step.title} className="flex gap-4 rounded-2xl border border-border bg-background/40 p-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-sm font-bold text-primary">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-sm font-bold text-primary">
                     {i + 1}
                   </span>
                   <div>
@@ -99,7 +99,7 @@ export function PricingTiers() {
                     rel="noopener noreferrer"
                   />
                 }
-                className="group h-12 w-full gap-2 rounded-xl border border-accent/40 bg-accent/10 text-base font-semibold text-accent shadow-[0_0_10px_-7px_var(--accent)] transition-shadow hover:bg-accent/15 hover:shadow-[0_0_14px_-6px_var(--accent)]"
+                className="group h-12 w-full gap-2 rounded-xl border border-accent/40 bg-accent/10 text-base font-semibold text-accent shadow-[0_0_10px_-7px_var(--accent)] transition-shadow hover:bg-accent/12 hover:shadow-[0_0_14px_-6px_var(--accent)]"
               >
                 <Headset className="h-[18px] w-[18px] transition-transform duration-300 group-hover:scale-110 motion-safe:animate-[float-line_2.4s_ease-in-out_infinite]" />
                 Contact Admin
@@ -109,12 +109,12 @@ export function PricingTiers() {
 
           {/* Buy License */}
           <div className="surface-luxe relative flex flex-col overflow-hidden rounded-3xl border border-primary/40 p-6 shadow-2xl shadow-primary/20 ring-1 ring-primary/20 sm:p-8">
-            <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/20 blur-3xl" />
+            <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/12 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-20 left-0 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
 
             <div className="relative flex items-center justify-between">
               <h3 className="text-xl font-bold">Buy License</h3>
-              <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
+              <span className="rounded-full bg-primary/12 px-3 py-1 text-xs font-semibold text-primary">
                 Direct access
               </span>
             </div>

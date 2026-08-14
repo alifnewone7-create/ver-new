@@ -35,7 +35,7 @@ export function UsageOverview() {
     <section className="border-luxe surface-luxe card-corner-glow relative overflow-hidden rounded-3xl p-5 sm:p-6">
       <div className="relative z-10 flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/15 text-accent">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/12 text-accent">
             <Gauge className="h-[1.1rem] w-[1.1rem]" />
           </span>
           <div>
@@ -50,7 +50,7 @@ export function UsageOverview() {
           className={cn(
             'flex items-center gap-1 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide',
             hasAccess
-              ? 'bg-primary/15 text-primary'
+              ? 'bg-primary/12 text-primary'
               : 'bg-input/40 text-muted-foreground',
           )}
         >
@@ -70,7 +70,7 @@ export function UsageOverview() {
         </div>
       ) : !hasAccess ? (
         <div className="relative mt-5 flex flex-col items-center gap-2 rounded-2xl border border-border/60 bg-input/10 p-6 text-center">
-          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
+          <span className="flex h-11 w-11 items-center justify-center rounded-xl icon-chip">
             <Lock className="h-5 w-5" />
           </span>
           <p className="text-sm font-semibold">Free account — no generations</p>
@@ -119,7 +119,7 @@ function UsageCard({
     <div className="flex flex-col gap-3 rounded-2xl border border-border/60 bg-input/15 p-4">
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/15 text-accent">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/12 text-accent">
             <Icon className="h-4 w-4" />
           </span>
           <p className="text-sm font-semibold leading-tight">

@@ -54,9 +54,9 @@ const fetcher = async (url: string): Promise<UsersResponse> => {
 
 const TIER_BADGE: Record<Tier, string> = {
   free: 'bg-input/40 text-muted-foreground',
-  basic: 'bg-accent/15 text-accent',
+  basic: 'bg-accent/12 text-accent',
   standard: 'bg-[var(--gold)]/15 text-[var(--gold)]',
-  premium: 'bg-primary/15 text-primary',
+  premium: 'bg-primary/12 text-primary',
   admin: 'bg-up/15 text-up',
 }
 
@@ -187,7 +187,7 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
                 className={cn(
                   'flex items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-semibold transition-colors',
                   active
-                    ? 'bg-primary/15 text-primary ring-1 ring-primary/25'
+                    ? 'bg-primary/12 text-primary ring-1 ring-primary/25'
                     : 'text-muted-foreground hover:bg-input/30 hover:text-foreground',
                 )}
               >
@@ -373,7 +373,7 @@ function PageHeading({
 }) {
   return (
     <div className="flex items-center gap-3">
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl icon-chip">
         <Icon className="h-6 w-6" />
       </span>
       <div className="min-w-0">
@@ -790,7 +790,7 @@ function TierSetter({ onDone }: { onDone: () => void }) {
 
   return (
     <section className="border-luxe surface-luxe relative overflow-hidden rounded-3xl p-5 sm:p-6">
-      <div className="pointer-events-none absolute -right-20 -top-20 h-44 w-44 rounded-full bg-primary/15 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 -top-20 h-44 w-44 rounded-full bg-primary/12 blur-3xl" />
 
       <div className="relative flex items-center gap-2">
         <Mail className="h-4 w-4 text-accent" />

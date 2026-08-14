@@ -18,7 +18,7 @@ export function AiEngineCard() {
   return (
     <div className="border-luxe surface-luxe relative overflow-hidden rounded-3xl p-5 shadow-2xl shadow-primary/15 sm:p-6">
       {/* glow */}
-      <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/12 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-accent/10 blur-3xl" />
 
       {/* header row */}

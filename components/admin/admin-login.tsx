@@ -42,10 +42,10 @@ export function AdminLogin({ onSuccess }: { onSuccess: () => void }) {
   return (
     <main className="flex min-h-dvh items-center justify-center bg-background px-4 py-12">
       <div className="border-luxe surface-luxe relative w-full max-w-sm overflow-hidden rounded-3xl p-6 shadow-2xl shadow-primary/20 sm:p-8">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/12 blur-3xl" />
 
         <div className="relative flex flex-col items-center text-center">
-          <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+          <span className="flex h-14 w-14 items-center justify-center rounded-2xl icon-chip">
             <ShieldCheck className="h-7 w-7" />
           </span>
           <h1 className="mt-4 text-2xl font-bold tracking-tight">Secure Portal</h1>

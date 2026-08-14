@@ -58,13 +58,13 @@ export function TradingChart() {
     <div className="border-luxe surface-luxe relative overflow-hidden rounded-[1.75rem] p-6 shadow-xl shadow-primary/10 sm:p-8">
       {/* ambient glow */}
       <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-primary/12 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-28 -left-20 h-56 w-56 rounded-full bg-[color-mix(in_oklab,var(--emerald)_16%,transparent)] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-28 -left-20 h-56 w-56 rounded-full bg-[color-mix(in_oklab,var(--emerald)_14%,transparent)] blur-3xl" />
 
       {/* header */}
       <div className="relative flex items-start justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[color-mix(in_oklab,var(--primary)_30%,transparent)] to-[color-mix(in_oklab,var(--primary)_10%,transparent)] text-[var(--primary)] ring-1 ring-[color-mix(in_oklab,var(--primary)_30%,transparent)]">
-            <span className="pointer-events-none absolute -right-3 -top-3 h-8 w-8 rounded-full bg-[color-mix(in_oklab,var(--primary)_35%,transparent)] blur-md" />
+          <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[color-mix(in_oklab,var(--primary)_14%,transparent)] to-[color-mix(in_oklab,var(--primary)_10%,transparent)] text-[var(--primary)] ring-1 ring-[color-mix(in_oklab,var(--primary)_14%,transparent)]">
+            <span className="pointer-events-none absolute -right-3 -top-3 h-8 w-8 rounded-full bg-[color-mix(in_oklab,var(--primary)_14%,transparent)] blur-md" />
             <Gauge className="gauge-needle relative h-5 w-5" />
           </span>
           <div className="flex flex-col">
@@ -90,7 +90,7 @@ export function TradingChart() {
           className={cn(
             'flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold',
             hasAccess
-              ? 'bg-[color-mix(in_oklab,var(--primary)_16%,transparent)] text-[var(--primary)] ring-1 ring-[color-mix(in_oklab,var(--primary)_32%,transparent)]'
+              ? 'bg-[color-mix(in_oklab,var(--primary)_14%,transparent)] text-[var(--primary)] ring-1 ring-[color-mix(in_oklab,var(--primary)_14%,transparent)]'
               : 'border border-border/60 bg-input/20 text-muted-foreground',
           )}
         >
@@ -126,7 +126,7 @@ export function TradingChart() {
       ) : !hasAccess ? (
         /* Free tier: fully locked, no counts */
         <div className="relative mt-6 flex flex-col items-center gap-3 rounded-2xl border border-dashed border-border/70 bg-[linear-gradient(135deg,color-mix(in_oklab,var(--primary)_10%,transparent),transparent)] p-8 text-center">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl icon-chip">
             <Lock className="h-5 w-5" />
           </span>
           <div>
@@ -170,7 +170,7 @@ export function TradingChart() {
             />
             <div className="animate-in fade-in zoom-in-95 border-luxe surface-luxe relative z-10 w-full max-w-sm overflow-hidden rounded-3xl p-6 text-center shadow-2xl shadow-primary/25 duration-200">
               <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
-              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
+              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl icon-chip">
                 <Clock className="h-7 w-7" />
               </span>
               <h2
@@ -222,7 +222,7 @@ function UsageTile({
 
   return (
     <li
-      className="relative flex flex-col gap-3 overflow-hidden rounded-2xl border border-border/60 p-4 transition-colors hover:border-[color:color-mix(in_oklab,var(--primary)_45%,transparent)]"
+      className="relative flex flex-col gap-3 overflow-hidden rounded-2xl border border-border/60 p-4 transition-colors hover:border-[color:color-mix(in_oklab,var(--primary)_14%,transparent)]"
       style={{
         background: `linear-gradient(135deg, color-mix(in oklab, ${color} 14%, transparent) 0%, color-mix(in oklab, ${color} 4%, transparent) 45%, transparent 100%)`,
       }}

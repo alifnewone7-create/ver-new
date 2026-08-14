@@ -114,12 +114,12 @@ const impactMeta: Record<NewsImpact, { label: string; dot: string; chip: string 
   medium: {
     label: 'Medium',
     dot: 'bg-gold',
-    chip: 'border-gold/40 bg-gold/15 text-gold',
+    chip: 'border-gold/40 bg-gold/12 text-gold',
   },
   low: {
     label: 'Low',
     dot: 'bg-accent',
-    chip: 'border-accent/40 bg-accent/15 text-accent',
+    chip: 'border-accent/40 bg-accent/12 text-accent',
   },
   holiday: {
     label: 'Holiday',
@@ -653,7 +653,7 @@ function StatCard({
       <span
         className={cn(
           'flex h-9 w-9 shrink-0 items-center justify-center rounded-xl',
-          tone === 'accent' && 'bg-accent/15 text-accent',
+          tone === 'accent' && 'bg-accent/12 text-accent',
           tone === 'up' && 'bg-up/15 text-up',
           tone === 'down' && 'bg-down/15 text-down',
         )}
@@ -688,7 +688,7 @@ function FigureCard({
 }) {
   return (
     <div className="flex items-center gap-3 rounded-2xl border border-border/60 bg-input/20 px-4 py-3">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/15">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/12">
         <Icon className="h-4 w-4 text-accent" />
       </span>
       <div className="min-w-0">
@@ -723,8 +723,8 @@ function NewsLockedState() {
   const { open } = useUpgradeGate()
   return (
     <div className="border-luxe surface-luxe relative flex flex-col items-center gap-4 overflow-hidden rounded-3xl p-8 text-center">
-      <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/20 blur-3xl" />
-      <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+      <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/12 blur-3xl" />
+      <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl icon-chip">
         <Lock className="h-7 w-7" />
       </span>
       <div className="relative">

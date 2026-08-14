@@ -363,18 +363,18 @@ function ManagementStudio() {
 type Tone = 'accent' | 'up' | 'down' | 'gold'
 
 const toneMap: Record<Tone, string> = {
-  accent: 'bg-accent/15 text-accent',
+  accent: 'bg-accent/12 text-accent',
   up: 'bg-up/15 text-up',
   down: 'bg-down/15 text-down',
-  gold: 'bg-gold/15 text-gold',
+  gold: 'bg-gold/12 text-gold',
 }
 
 /** Subtle single-hue gradients for icon chips (diagonal, low → high opacity). */
 const toneGradient: Record<Tone, string> = {
-  accent: 'bg-gradient-to-br from-accent/30 via-accent/15 to-accent/5 text-accent',
+  accent: 'bg-gradient-to-br from-accent/30 via-accent/12 to-accent/5 text-accent',
   up: 'bg-gradient-to-br from-up/30 via-up/15 to-up/5 text-up',
   down: 'bg-gradient-to-br from-down/30 via-down/15 to-down/5 text-down',
-  gold: 'bg-gradient-to-br from-gold/30 via-gold/15 to-gold/5 text-gold',
+  gold: 'bg-gradient-to-br from-gold/30 via-gold/12 to-gold/5 text-gold',
 }
 
 interface Level {
@@ -562,7 +562,7 @@ function MtgToggle({ value, onChange }: { value: boolean; onChange: (v: boolean)
         <span
           className={cn(
             'flex h-8 w-8 items-center justify-center rounded-xl transition-colors',
-            value ? 'bg-accent/20 text-accent' : 'bg-input/60 text-muted-foreground',
+            value ? 'bg-accent/12 text-accent' : 'bg-input/60 text-muted-foreground',
           )}
         >
           <Repeat className={cn('h-4 w-4', value && 'icon-spin-slow')} />
@@ -876,7 +876,7 @@ function TradeCard({
               'flex items-center gap-0.5 rounded-full border px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide',
               isLossMtg
                 ? 'border-down/40 bg-down/15 text-down'
-                : 'border-accent/40 bg-accent/15 text-accent',
+                : 'border-accent/40 bg-accent/12 text-accent',
             )}
           >
             <Repeat className="h-2.5 w-2.5" />
@@ -1085,7 +1085,7 @@ function TabButton({
         <span
           className={cn(
             'flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[10px] font-bold tabular-nums',
-            active ? 'bg-primary-foreground/20 text-primary-foreground' : 'bg-accent/15 text-accent',
+            active ? 'bg-primary-foreground/20 text-primary-foreground' : 'bg-accent/12 text-accent',
           )}
         >
           {badge}

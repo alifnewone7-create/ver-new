@@ -393,3 +393,34 @@ agent_communication:
         works on the preview URL (premium tier, 50/tool). Only remaining console noise is the
         pre-existing upstream Base UI dev warning about <Button render={<Link/>}> (dev-only, harmless).
         Backend untouched this round.
+
+## UPDATE 5 — Higgsfield colour grading + button style + icon style (design kept)
+agent_communication:
+    - agent: "main"
+      message: |
+        User asked to keep the existing (original) design but re-grade it like higgsfield.ai, with
+        higgsfield-style buttons and icons. Frontend/CSS only — backend untouched.
+        1) app/globals.css: every hard-coded oklch value re-graded programmatically —
+           tinted SURFACES (chroma <= 0.09) -> neutral graphite (hue 240, chroma 0.006),
+           vivid ACCENTS (chroma > 0.09) -> single acid lime (hue 124). Then an un-layered
+           override block appended: new palette (--background #0F1113-ish, --primary #CAFF2F with
+           near-black --primary-foreground, --gold/--emerald neutralised to light grey so lime is
+           the ONLY accent), flat ink body (one 3% lime bloom), opaque graphite .surface-luxe,
+           white hairline .border-luxe, .card-corner-glow + .welcome-luxe-purple disabled.
+        2) BUTTONS: .btn-luxe -> flat acid-lime PILL (border-radius 9999px) with ink text, no
+           gradient/sheen/glow; .btn-luxe-outline -> quiet graphite pill with 10% white border.
+           components/ui/button.tsx untouched except its original hover value preserved.
+        3) ICONS: .lucide { stroke-width: 1.6 } globally (thin monochrome look); primary-tinted
+           icon chips replaced by a neutral .icon-chip (6% white + 10% white ring, light glyph)
+           in 9 components; tool-cards icon tiles -> graphite chip with lime glyph and its hue
+           trio unified to 124.
+        4) .text-gradient / .text-shine -> solid lime, shimmer animation disabled.
+        5) Large lime fills (bg/from/to/via-primary|accent|gold|emerald over 12%) tamed to 12%,
+           except values >= 30% which were restored to the upstream originals (chart lines, scan
+           sheens, avatar ring) so functional highlights stay visible.
+        IMPORTANT ENV NOTE: Turbopack dev serves a STALE compiled CSS chunk after globals.css
+        edits — a cold restart is required each time:
+        `supervisorctl stop nextjs && pkill -9 -f "next dev" && rm -rf .next && supervisorctl start nextjs`.
+        Verified after cold rebuild: / /login /registration /dashboard /secret-portal-sx /privacy
+        all 200; login -> dashboard flow works; desktop 1440px + mobile 390px screenshots checked
+        (landing, auth, dashboard, otc-chart-analyzer, live-signals, admin portal).

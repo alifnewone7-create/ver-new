@@ -351,7 +351,7 @@ function RuleCard({
 }) {
   return (
     <div className="flex items-center gap-3 rounded-2xl border border-border/60 bg-input/20 px-4 py-3">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/15">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent/12">
         <Icon className="h-4 w-4 text-accent" />
       </span>
       <div className="min-w-0">

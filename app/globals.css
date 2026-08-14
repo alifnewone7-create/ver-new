@@ -152,45 +152,45 @@
 :root {
   color-scheme: dark;
   /* Deep green-tinted ink base */
-  --background: oklch(0.16 0.03 154);
-  --foreground: oklch(0.97 0.01 150);
-  --card: oklch(0.21 0.045 154);
-  --card-foreground: oklch(0.97 0.01 150);
-  --popover: oklch(0.19 0.04 154);
-  --popover-foreground: oklch(0.97 0.01 150);
+  --background: oklch(0.16 0.006 240);
+  --foreground: oklch(0.97 0.01 240);
+  --card: oklch(0.21 0.006 240);
+  --card-foreground: oklch(0.97 0.01 240);
+  --popover: oklch(0.19 0.006 240);
+  --popover-foreground: oklch(0.97 0.01 240);
   /* Primary = emerald-lime (main brand color) */
-  --primary: oklch(0.67 0.22 158);
-  --primary-foreground: oklch(0.14 0.03 158);
-  --secondary: oklch(0.26 0.05 154);
-  --secondary-foreground: oklch(0.97 0.01 150);
-  --muted: oklch(0.26 0.04 154);
-  --muted-foreground: oklch(0.72 0.03 154);
-  --accent: oklch(0.82 0.19 132);
-  --accent-foreground: oklch(0.16 0.03 154);
-  --destructive: oklch(0.62 0.23 25);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.67 0.22 158);
-  --up: oklch(0.84 0.21 142);
-  --down: oklch(0.65 0.24 25);
+  --primary: oklch(0.67 0.22 124);
+  --primary-foreground: oklch(0.14 0.006 240);
+  --secondary: oklch(0.26 0.006 240);
+  --secondary-foreground: oklch(0.97 0.01 240);
+  --muted: oklch(0.26 0.006 240);
+  --muted-foreground: oklch(0.72 0.006 240);
+  --accent: oklch(0.82 0.19 124);
+  --accent-foreground: oklch(0.16 0.006 240);
+  --destructive: oklch(0.62 0.22 124);
+  --border: oklch(1 0 240 / 12%);
+  --input: oklch(1 0 240 / 14%);
+  --ring: oklch(0.67 0.22 124);
+  --up: oklch(0.84 0.21 124);
+  --down: oklch(0.65 0.22 124);
   /* Secondary accents used by the dashboard only */
-  --gold: oklch(0.82 0.12 88);
-  --emerald: oklch(0.74 0.14 165);
-  --steel: oklch(0.7 0.13 115);
-  --chart-1: oklch(0.62 0.22 160);
-  --chart-2: oklch(0.7 0.16 135);
-  --chart-3: oklch(0.78 0.2 145);
-  --chart-4: oklch(0.65 0.24 25);
-  --chart-5: oklch(0.8 0.12 170);
+  --gold: oklch(0.82 0.12 124);
+  --emerald: oklch(0.74 0.14 124);
+  --steel: oklch(0.7 0.13 124);
+  --chart-1: oklch(0.62 0.22 124);
+  --chart-2: oklch(0.7 0.16 124);
+  --chart-3: oklch(0.78 0.2 124);
+  --chart-4: oklch(0.65 0.22 124);
+  --chart-5: oklch(0.8 0.12 124);
   --radius: 0.75rem;
-  --sidebar: oklch(0.19 0.04 154);
-  --sidebar-foreground: oklch(0.97 0.01 150);
-  --sidebar-primary: oklch(0.67 0.22 158);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.26 0.05 154);
-  --sidebar-accent-foreground: oklch(0.97 0.01 150);
-  --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: oklch(0.67 0.22 158);
+  --sidebar: oklch(0.19 0.006 240);
+  --sidebar-foreground: oklch(0.97 0.01 240);
+  --sidebar-primary: oklch(0.67 0.22 124);
+  --sidebar-primary-foreground: oklch(0.99 0 240);
+  --sidebar-accent: oklch(0.26 0.006 240);
+  --sidebar-accent-foreground: oklch(0.97 0.01 240);
+  --sidebar-border: oklch(1 0 240 / 12%);
+  --sidebar-ring: oklch(0.67 0.22 124);
 }
 
 @layer base {
@@ -202,11 +202,11 @@
     @apply bg-background text-foreground;
     /* Luxury graded background — richer layered radial pools + diagonal color wash */
     background-image:
-      radial-gradient(65rem 45rem at 82% -6%, oklch(0.62 0.24 162 / 0.34), transparent 58%),
-      radial-gradient(52rem 42rem at 4% 8%, oklch(0.7 0.18 132 / 0.24), transparent 56%),
-      radial-gradient(46rem 46rem at 18% 92%, oklch(0.6 0.2 148 / 0.22), transparent 58%),
-      radial-gradient(58rem 52rem at 92% 78%, oklch(0.55 0.22 172 / 0.26), transparent 60%),
-      linear-gradient(155deg, oklch(0.21 0.05 148) 0%, oklch(0.16 0.04 156) 45%, oklch(0.13 0.03 162) 100%);
+      radial-gradient(65rem 45rem at 82% -6%, oklch(0.62 0.22 124 / 0.34), transparent 58%),
+      radial-gradient(52rem 42rem at 4% 8%, oklch(0.7 0.18 124 / 0.24), transparent 56%),
+      radial-gradient(46rem 46rem at 18% 92%, oklch(0.6 0.2 124 / 0.22), transparent 58%),
+      radial-gradient(58rem 52rem at 92% 78%, oklch(0.55 0.22 124 / 0.26), transparent 60%),
+      linear-gradient(155deg, oklch(0.21 0.006 240) 0%, oklch(0.16 0.006 240) 45%, oklch(0.13 0.006 240) 100%);
     background-attachment: fixed;
   }
   html {
@@ -220,7 +220,7 @@
     background-image: linear-gradient(
       100deg,
       var(--accent) 0%,
-      oklch(0.8 0.12 170) 45%,
+      oklch(0.8 0.12 124) 45%,
       var(--primary) 100%
     );
     -webkit-background-clip: text;
@@ -234,7 +234,7 @@
       100deg,
       var(--primary) 0%,
       var(--primary) 38%,
-      oklch(0.98 0.02 170) 50%,
+      oklch(0.98 0.02 240) 50%,
       var(--primary) 62%,
       var(--primary) 100%
     );
@@ -255,9 +255,9 @@
   .surface-luxe {
     background-image: linear-gradient(
       160deg,
-      oklch(0.24 0.05 158 / 0.9) 0%,
-      oklch(0.19 0.04 154 / 0.95) 55%,
-      oklch(0.17 0.035 152 / 0.95) 100%
+      oklch(0.24 0.006 240 / 0.9) 0%,
+      oklch(0.19 0.006 240 / 0.95) 55%,
+      oklch(0.17 0.006 240 / 0.95) 100%
     );
   }
 
@@ -265,15 +265,15 @@
   .profile-card {
     position: relative;
     isolation: isolate;
-    border: 1px solid oklch(1 0 0 / 14%);
+    border: 1px solid oklch(1 0 240 / 14%);
     background:
-      radial-gradient(38rem 20rem at 88% -12%, oklch(0.62 0.24 162 / 0.32), transparent 60%),
-      radial-gradient(30rem 22rem at 6% 4%, oklch(0.7 0.18 132 / 0.2), transparent 58%),
-      radial-gradient(34rem 26rem at 96% 108%, oklch(0.55 0.22 172 / 0.22), transparent 62%),
-      linear-gradient(155deg, oklch(0.25 0.05 156 / 0.98), oklch(0.17 0.035 154 / 0.99));
+      radial-gradient(38rem 20rem at 88% -12%, oklch(0.62 0.22 124 / 0.32), transparent 60%),
+      radial-gradient(30rem 22rem at 6% 4%, oklch(0.7 0.18 124 / 0.2), transparent 58%),
+      radial-gradient(34rem 26rem at 96% 108%, oklch(0.55 0.22 124 / 0.22), transparent 62%),
+      linear-gradient(155deg, oklch(0.25 0.006 240 / 0.98), oklch(0.17 0.006 240 / 0.99));
     box-shadow:
-      0 32px 80px -28px oklch(0.06 0.025 155 / 0.9),
-      0 1px 0 oklch(1 0 0 / 10%) inset;
+      0 32px 80px -28px oklch(0.06 0.006 240 / 0.9),
+      0 1px 0 oklch(1 0 240 / 10%) inset;
   }
   /* Static gradient hairline across the top edge */
   .profile-card::before {
@@ -286,7 +286,7 @@
       100deg,
       transparent 0%,
       var(--accent) 30%,
-      oklch(0.8 0.12 170) 50%,
+      oklch(0.8 0.12 124) 50%,
       var(--primary) 70%,
       transparent 100%
     );
@@ -296,50 +296,50 @@
   .profile-card__header {
     position: relative;
     background:
-      linear-gradient(135deg, oklch(0.62 0.22 160 / 0.16), transparent 55%),
-      oklch(0.2 0.04 154 / 0.86);
+      linear-gradient(135deg, oklch(0.62 0.22 124 / 0.16), transparent 55%),
+      oklch(0.2 0.006 240 / 0.86);
   }
   .profile-card__close {
     border: none;
     color: var(--primary-foreground);
     background-image: linear-gradient(
       135deg,
-      oklch(0.68 0.21 172) 0%,
-      oklch(0.6 0.24 168) 52%,
-      oklch(0.52 0.22 166) 100%
+      oklch(0.68 0.21 124) 0%,
+      oklch(0.6 0.22 124) 52%,
+      oklch(0.52 0.22 124) 100%
     );
     box-shadow:
-      0 0 0 1.5px oklch(0.8 0.14 170 / 0.55) inset,
-      0 1px 0 0 oklch(1 0 0 / 0.28) inset,
-      0 8px 20px -8px oklch(0.55 0.24 170 / 0.7);
+      0 0 0 1.5px oklch(0.8 0.14 124 / 0.55) inset,
+      0 1px 0 0 oklch(1 0 240 / 0.28) inset,
+      0 8px 20px -8px oklch(0.55 0.22 124 / 0.7);
     transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms ease;
   }
   .profile-card__close:hover {
     transform: rotate(90deg) scale(1.05);
     box-shadow:
-      0 0 0 1.5px oklch(0.85 0.15 170 / 0.7) inset,
-      0 1px 0 0 oklch(1 0 0 / 0.32) inset,
-      0 12px 26px -8px oklch(0.55 0.24 170 / 0.85);
+      0 0 0 1.5px oklch(0.85 0.15 124 / 0.7) inset,
+      0 1px 0 0 oklch(1 0 240 / 0.32) inset,
+      0 12px 26px -8px oklch(0.55 0.22 124 / 0.85);
   }
   .profile-card__identity {
-    border: 1px solid oklch(0.7 0.16 135 / 32%);
+    border: 1px solid oklch(0.7 0.16 124 / 32%);
     background: linear-gradient(
       125deg,
-      oklch(0.62 0.22 160 / 24%),
-      oklch(0.7 0.16 135 / 12%),
-      oklch(0.74 0.14 165 / 8%)
+      oklch(0.62 0.22 124 / 24%),
+      oklch(0.7 0.16 124 / 12%),
+      oklch(0.74 0.14 124 / 8%)
     );
     box-shadow:
-      0 1px 0 oklch(1 0 0 / 10%) inset,
-      0 14px 32px -24px oklch(0.62 0.22 160 / 65%);
+      0 1px 0 oklch(1 0 240 / 10%) inset,
+      0 14px 32px -24px oklch(0.62 0.22 124 / 65%);
   }
   .profile-card__avatar {
     position: relative;
     padding: 0;
     background: transparent;
     box-shadow:
-      0 12px 30px -14px oklch(0.62 0.22 160 / 75%),
-      0 0 18px oklch(0.7 0.16 135 / 18%);
+      0 12px 30px -14px oklch(0.62 0.22 124 / 75%),
+      0 0 18px oklch(0.7 0.16 124 / 18%);
   }
   /* Soft single-color glow behind the avatar (static) */
   .profile-card__avatar::before {
@@ -349,7 +349,7 @@
     border-radius: inherit;
     background: radial-gradient(
       circle at 50% 50%,
-      oklch(0.7 0.16 135 / 0.45),
+      oklch(0.7 0.16 124 / 0.45),
       transparent 70%
     );
     filter: blur(8px);
@@ -357,62 +357,62 @@
     z-index: -1;
   }
   .profile-card__status {
-    border: 1px solid oklch(0.74 0.14 165 / 28%);
-    background: oklch(0.74 0.14 165 / 10%);
+    border: 1px solid oklch(0.74 0.14 124 / 28%);
+    background: oklch(0.74 0.14 124 / 10%);
     color: var(--emerald);
   }
   .profile-card__detail,
   .profile-card__tier {
-    border: 1px solid oklch(0.7 0.16 135 / 22%);
+    border: 1px solid oklch(0.7 0.16 124 / 22%);
     background: linear-gradient(
       135deg,
-      oklch(0.7 0.16 135 / 14%),
-      oklch(0.62 0.22 160 / 7%),
-      oklch(1 0 0 / 3%)
+      oklch(0.7 0.16 124 / 14%),
+      oklch(0.62 0.22 124 / 7%),
+      oklch(1 0 240 / 3%)
     );
-    box-shadow: 0 1px 0 oklch(1 0 0 / 7%) inset;
+    box-shadow: 0 1px 0 oklch(1 0 240 / 7%) inset;
     transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms ease,
       box-shadow 220ms ease;
   }
   .profile-card__detail:hover,
   .profile-card__tier:hover {
     transform: translateY(-3px);
-    border-color: oklch(0.7 0.16 135 / 42%);
+    border-color: oklch(0.7 0.16 124 / 42%);
     box-shadow:
-      0 1px 0 oklch(1 0 0 / 10%) inset,
-      0 16px 30px -22px oklch(0.62 0.22 160 / 70%);
+      0 1px 0 oklch(1 0 240 / 10%) inset,
+      0 16px 30px -22px oklch(0.62 0.22 124 / 70%);
   }
   .profile-card__tier {
-    border-color: oklch(0.82 0.12 88 / 30%);
+    border-color: oklch(0.82 0.12 124 / 30%);
     background: linear-gradient(
       135deg,
-      oklch(0.82 0.12 88 / 16%),
-      oklch(0.74 0.14 165 / 7%),
-      oklch(1 0 0 / 3%)
+      oklch(0.82 0.12 124 / 16%),
+      oklch(0.74 0.14 124 / 7%),
+      oklch(1 0 240 / 3%)
     );
   }
   .profile-card__tier:hover {
-    border-color: oklch(0.82 0.12 88 / 50%);
+    border-color: oklch(0.82 0.12 124 / 50%);
   }
   .profile-card__icon,
   .profile-card__tier-icon {
     position: relative;
     background: linear-gradient(
       135deg,
-      oklch(0.7 0.16 135 / 34%),
-      oklch(0.7 0.16 135 / 16%) 55%,
-      oklch(0.7 0.16 135 / 6%)
+      oklch(0.7 0.16 124 / 34%),
+      oklch(0.7 0.16 124 / 16%) 55%,
+      oklch(0.7 0.16 124 / 6%)
     );
     color: var(--accent);
-    box-shadow: 0 1px 0 oklch(1 0 0 / 8%) inset;
+    box-shadow: 0 1px 0 oklch(1 0 240 / 8%) inset;
     transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
   }
   .profile-card__tier-icon {
     background: linear-gradient(
       135deg,
-      oklch(0.82 0.12 88 / 34%),
-      oklch(0.82 0.12 88 / 16%) 55%,
-      oklch(0.82 0.12 88 / 6%)
+      oklch(0.82 0.12 124 / 34%),
+      oklch(0.82 0.12 124 / 16%) 55%,
+      oklch(0.82 0.12 124 / 6%)
     );
     color: var(--gold);
   }
@@ -449,14 +449,14 @@
     transform: translateY(-2px) rotate(6deg) scale(1.08);
   }
   .profile-card__logout {
-    border: 1px solid oklch(0.62 0.23 25 / 30%);
-    background: oklch(0.62 0.23 25 / 8%);
+    border: 1px solid oklch(0.62 0.22 124 / 30%);
+    background: oklch(0.62 0.22 124 / 8%);
     color: var(--destructive);
     transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
   }
   .profile-card__logout:hover {
-    border-color: oklch(0.62 0.23 25 / 48%);
-    background: oklch(0.62 0.23 25 / 14%);
+    border-color: oklch(0.62 0.22 124 / 48%);
+    background: oklch(0.62 0.22 124 / 14%);
     transform: translateY(-1px);
   }
   /* Logout icon slides out on hover */
@@ -468,14 +468,14 @@
   }
   /* Copy email button */
   .profile-card__copy {
-    border: 1px solid oklch(0.7 0.16 135 / 26%);
-    background: oklch(0.7 0.16 135 / 10%);
+    border: 1px solid oklch(0.7 0.16 124 / 26%);
+    background: oklch(0.7 0.16 124 / 10%);
     color: var(--foreground);
     transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
   }
   .profile-card__copy:not(:disabled):hover {
-    border-color: oklch(0.7 0.16 135 / 46%);
-    background: oklch(0.7 0.16 135 / 18%);
+    border-color: oklch(0.7 0.16 124 / 46%);
+    background: oklch(0.7 0.16 124 / 18%);
     transform: translateY(-1px);
   }
   .profile-card__copy:not(:disabled):active {
@@ -495,16 +495,16 @@
     overflow: hidden;
     background-image: linear-gradient(
       155deg,
-      oklch(0.33 0.06 160 / 0.5) 0%,
-      oklch(0.24 0.05 156 / 0.52) 48%,
-      oklch(0.19 0.04 152 / 0.58) 100%
+      oklch(0.33 0.006 240 / 0.5) 0%,
+      oklch(0.24 0.006 240 / 0.52) 48%,
+      oklch(0.19 0.006 240 / 0.58) 100%
     );
     -webkit-backdrop-filter: blur(16px) saturate(150%);
     backdrop-filter: blur(16px) saturate(150%);
     box-shadow:
-      inset 0 1px 0 oklch(0.92 0.05 165 / 0.2),
-      inset 0 0 0 1px oklch(0.92 0.05 165 / 0.05),
-      0 2px 12px oklch(0.12 0.03 150 / 0.4);
+      inset 0 1px 0 oklch(0.92 0.006 240 / 0.2),
+      inset 0 0 0 1px oklch(0.92 0.006 240 / 0.05),
+      0 2px 12px oklch(0.12 0.006 240 / 0.4);
     transition:
       background-image 0.35s ease,
       border-color 0.35s ease,
@@ -538,8 +538,8 @@
     background: linear-gradient(
       115deg,
       transparent 20%,
-      oklch(0.95 0.05 165 / 0.16) 45%,
-      oklch(0.95 0.05 165 / 0.06) 55%,
+      oklch(0.95 0.006 240 / 0.16) 45%,
+      oklch(0.95 0.006 240 / 0.06) 55%,
       transparent 80%
     );
     background-size: 250% 100%;
@@ -552,13 +552,13 @@
   .market-tile:hover {
     background-image: linear-gradient(
       155deg,
-      oklch(0.41 0.09 164 / 0.62) 0%,
-      oklch(0.3 0.08 160 / 0.62) 50%,
-      oklch(0.23 0.06 156 / 0.62) 100%
+      oklch(0.41 0.006 240 / 0.62) 0%,
+      oklch(0.3 0.006 240 / 0.62) 50%,
+      oklch(0.23 0.006 240 / 0.62) 100%
     );
     box-shadow:
-      inset 0 1px 0 oklch(0.94 0.06 168 / 0.32),
-      0 12px 30px oklch(0.1 0.03 150 / 0.55),
+      inset 0 1px 0 oklch(0.94 0.006 240 / 0.32),
+      0 12px 30px oklch(0.1 0.006 240 / 0.55),
       0 0 0 1px color-mix(in oklab, var(--accent) 50%, transparent),
       0 0 26px color-mix(in oklab, var(--accent) 28%, transparent);
     transform: translateY(-4px) scale(1.02);
@@ -613,8 +613,8 @@
     padding: 1px;
     background: linear-gradient(
       140deg,
-      oklch(0.7 0.16 135 / 0.55),
-      oklch(0.62 0.22 160 / 0.15) 45%,
+      oklch(0.7 0.16 124 / 0.55),
+      oklch(0.62 0.22 124 / 0.15) 45%,
       transparent 70%
     );
     -webkit-mask:
@@ -632,15 +632,15 @@
     isolation: isolate;
     background-image: linear-gradient(
       135deg,
-      oklch(0.68 0.21 172) 0%,
-      oklch(0.6 0.24 168) 52%,
-      oklch(0.52 0.22 166) 100%
+      oklch(0.68 0.21 124) 0%,
+      oklch(0.6 0.22 124) 52%,
+      oklch(0.52 0.22 124) 100%
     );
     color: var(--primary-foreground);
     box-shadow:
-      0 0 0 1.5px oklch(0.8 0.14 170 / 0.55) inset,
-      0 1px 0 0 oklch(1 0 0 / 0.28) inset,
-      0 10px 26px -10px oklch(0.55 0.24 170 / 0.7);
+      0 0 0 1.5px oklch(0.8 0.14 124 / 0.55) inset,
+      0 1px 0 0 oklch(1 0 240 / 0.28) inset,
+      0 10px 26px -10px oklch(0.55 0.22 124 / 0.7);
     transition:
       box-shadow 0.3s ease,
       transform 0.2s ease,
@@ -649,9 +649,9 @@
   .btn-luxe:hover {
     filter: brightness(1.08);
     box-shadow:
-      0 0 0 1.5px oklch(0.84 0.14 170 / 0.7) inset,
-      0 1px 0 0 oklch(1 0 0 / 0.32) inset,
-      0 16px 34px -12px oklch(0.55 0.24 170 / 0.85);
+      0 0 0 1.5px oklch(0.84 0.14 124 / 0.7) inset,
+      0 1px 0 0 oklch(1 0 240 / 0.32) inset,
+      0 16px 34px -12px oklch(0.55 0.22 124 / 0.85);
   }
   .btn-luxe:active {
     transform: translateY(1px);
@@ -665,7 +665,7 @@
     background: linear-gradient(
       100deg,
       transparent 20%,
-      oklch(1 0 0 / 0.25) 48%,
+      oklch(1 0 240 / 0.25) 48%,
       transparent 76%
     );
     transform: translateX(-120%);
@@ -681,11 +681,11 @@
     position: relative;
     background-image: linear-gradient(
       160deg,
-      oklch(0.26 0.05 158 / 0.7),
-      oklch(0.2 0.04 154 / 0.8)
+      oklch(0.26 0.006 240 / 0.7),
+      oklch(0.2 0.006 240 / 0.8)
     );
     color: var(--foreground);
-    box-shadow: 0 1px 0 0 oklch(1 0 0 / 0.08) inset;
+    box-shadow: 0 1px 0 0 oklch(1 0 240 / 0.08) inset;
     transition:
       box-shadow 0.3s ease,
       transform 0.2s ease,
@@ -693,7 +693,7 @@
   }
   .btn-luxe-outline:hover {
     filter: brightness(1.1);
-    box-shadow: 0 1px 0 0 oklch(1 0 0 / 0.12) inset;
+    box-shadow: 0 1px 0 0 oklch(1 0 240 / 0.12) inset;
   }
   .btn-luxe-outline:active {
     transform: translateY(1px);
@@ -714,8 +714,8 @@
     border-radius: 9999px;
     background: radial-gradient(
       circle at 70% 30%,
-      oklch(0.62 0.24 170 / 0.55) 0%,
-      oklch(0.6 0.2 162 / 0.28) 38%,
+      oklch(0.62 0.22 124 / 0.55) 0%,
+      oklch(0.6 0.2 124 / 0.28) 38%,
       transparent 70%
     );
     filter: blur(14px);
@@ -1031,7 +1031,7 @@
 .welcome-luxe-purple {
   background: radial-gradient(
     120% 90% at 50% 45%,
-    color-mix(in oklab, oklch(0.58 0.24 180) 26%, transparent),
+    color-mix(in oklab, oklch(0.58 0.22 124) 26%, transparent),
     transparent 62%
   );
   opacity: 0.55;
@@ -1059,7 +1059,7 @@
   background: conic-gradient(
     from var(--welcome-angle, 0deg),
     transparent 0deg,
-    color-mix(in oklab, oklch(0.6 0.24 180) 70%, transparent) 40deg,
+    color-mix(in oklab, oklch(0.6 0.22 124) 70%, transparent) 40deg,
     transparent 130deg,
     transparent 360deg
   );
@@ -1167,7 +1167,7 @@
 /* Thin, subtle horizontal scrollbar for card rails */
 .scroll-rail {
   scrollbar-width: thin;
-  scrollbar-color: oklch(1 0 0 / 18%) transparent;
+  scrollbar-color: oklch(1 0 240 / 18%) transparent;
 }
 .scroll-rail::-webkit-scrollbar {
   height: 6px;
@@ -1176,11 +1176,11 @@
   background: transparent;
 }
 .scroll-rail::-webkit-scrollbar-thumb {
-  background: oklch(1 0 0 / 16%);
+  background: oklch(1 0 240 / 16%);
   border-radius: 9999px;
 }
 .scroll-rail::-webkit-scrollbar-thumb:hover {
-  background: oklch(1 0 0 / 28%);
+  background: oklch(1 0 240 / 28%);
 }
 
 @keyframes orbit-cw {
@@ -1393,11 +1393,11 @@
   .signal-card {
   isolation: isolate;
   background:
-  radial-gradient(140% 120% at 100% 0%, oklch(1 0 0 / 0.04), transparent 55%),
-  linear-gradient(150deg, oklch(0.23 0.045 154 / 0.95), oklch(0.16 0.035 154 / 0.95));
+  radial-gradient(140% 120% at 100% 0%, oklch(1 0 240 / 0.04), transparent 55%),
+  linear-gradient(150deg, oklch(0.23 0.006 240 / 0.95), oklch(0.16 0.006 240 / 0.95));
   box-shadow:
-  inset 0 1px 0 oklch(1 0 0 / 0.06),
-  0 20px 44px -26px oklch(0 0 0 / 0.85);
+  inset 0 1px 0 oklch(1 0 240 / 0.06),
+  0 20px 44px -26px oklch(0 0 240 / 0.85);
   }
 
   .signal-card-up {
@@ -1445,24 +1445,24 @@
   /* directional badge */
   .signal-badge {
   isolation: isolate;
-  color: oklch(0.99 0 0);
+  color: oklch(0.99 0 240);
   box-shadow:
-  inset 0 1px 1px oklch(1 0 0 / 0.3),
-  inset 0 -6px 12px oklch(0 0 0 / 0.35),
-  0 10px 22px -12px oklch(0 0 0 / 0.7);
+  inset 0 1px 1px oklch(1 0 240 / 0.3),
+  inset 0 -6px 12px oklch(0 0 240 / 0.35),
+  0 10px 22px -12px oklch(0 0 240 / 0.7);
   animation: signal-badge-float 3s ease-in-out infinite;
   }
 
   .signal-badge-up {
   background:
-  radial-gradient(circle at 50% 28%, oklch(0.88 0.16 145 / 0.95), transparent 72%),
-  linear-gradient(155deg, oklch(0.52 0.18 145), oklch(0.3 0.11 145));
+  radial-gradient(circle at 50% 28%, oklch(0.88 0.16 124 / 0.95), transparent 72%),
+  linear-gradient(155deg, oklch(0.52 0.18 124), oklch(0.3 0.11 124));
   }
 
   .signal-badge-down {
   background:
-  radial-gradient(circle at 50% 28%, oklch(0.8 0.2 25 / 0.95), transparent 72%),
-  linear-gradient(155deg, oklch(0.52 0.22 25), oklch(0.3 0.15 25));
+  radial-gradient(circle at 50% 28%, oklch(0.8 0.2 124 / 0.95), transparent 72%),
+  linear-gradient(155deg, oklch(0.52 0.22 124), oklch(0.3 0.15 124));
   }
 
   /* rotating conic accent ring */
@@ -1474,7 +1474,7 @@
   background: conic-gradient(
   from 0deg,
   transparent 0deg,
-  oklch(1 0 0 / 0.85) 40deg,
+  oklch(1 0 240 / 0.85) 40deg,
   transparent 120deg,
   transparent 360deg
   );
@@ -1491,8 +1491,8 @@
   }
 
   .signal-badge-icon {
-  color: oklch(0.99 0 0);
-  filter: drop-shadow(0 2px 4px oklch(0 0 0 / 0.45));
+  color: oklch(0.99 0 240);
+  filter: drop-shadow(0 2px 4px oklch(0 0 240 / 0.45));
   animation: signal-badge-pop 2.4s ease-in-out infinite;
   }
 
@@ -1571,7 +1571,7 @@
   /* ── Aurora beacon signal card (unique animated luxury) ── */
   .lux-beacon {
   isolation: isolate;
-  box-shadow: 0 30px 60px -34px oklch(0 0 0 / 0.9);
+  box-shadow: 0 30px 60px -34px oklch(0 0 240 / 0.9);
   }
 
   /* rotating light beam that lights up the card border */
@@ -1589,8 +1589,8 @@
   background: conic-gradient(
   from 0deg,
   transparent 0deg,
-  oklch(0.72 0.18 150) 34deg,
-  oklch(0.95 0.06 120) 62deg,
+  oklch(0.72 0.18 124) 34deg,
+  oklch(0.95 0.006 240) 62deg,
   transparent 120deg,
   transparent 360deg
   );
@@ -1600,8 +1600,8 @@
   background: conic-gradient(
   from 0deg,
   transparent 0deg,
-  oklch(0.66 0.22 25) 34deg,
-  oklch(0.9 0.1 45) 62deg,
+  oklch(0.66 0.22 124) 34deg,
+  oklch(0.9 0.1 124) 62deg,
   transparent 120deg,
   transparent 360deg
   );
@@ -1618,21 +1618,21 @@
 
   /* dark glass inner surface */
   .lux-beacon-inner {
-  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+  box-shadow: inset 0 1px 0 oklch(1 0 240 / 0.06);
   }
 
   .lux-beacon-up .lux-beacon-inner {
   background:
-  radial-gradient(130% 150% at 100% 0%, oklch(0.5 0.14 150 / 0.3), transparent 55%),
-  radial-gradient(120% 140% at 0% 0%, oklch(0.26 0.03 200 / 0.9), transparent 60%),
-  linear-gradient(155deg, oklch(0.16 0.04 160 / 0.99), oklch(0.1 0.02 200 / 0.99));
+  radial-gradient(130% 150% at 100% 0%, oklch(0.5 0.14 124 / 0.3), transparent 55%),
+  radial-gradient(120% 140% at 0% 0%, oklch(0.26 0.006 240 / 0.9), transparent 60%),
+  linear-gradient(155deg, oklch(0.16 0.006 240 / 0.99), oklch(0.1 0.02 240 / 0.99));
   }
 
   .lux-beacon-down .lux-beacon-inner {
   background:
-  radial-gradient(130% 150% at 100% 0%, oklch(0.5 0.18 25 / 0.32), transparent 55%),
-  radial-gradient(120% 140% at 0% 0%, oklch(0.26 0.04 20 / 0.9), transparent 60%),
-  linear-gradient(155deg, oklch(0.17 0.06 25 / 0.99), oklch(0.1 0.02 20 / 0.99));
+  radial-gradient(130% 150% at 100% 0%, oklch(0.5 0.18 124 / 0.32), transparent 55%),
+  radial-gradient(120% 140% at 0% 0%, oklch(0.26 0.006 240 / 0.9), transparent 60%),
+  linear-gradient(155deg, oklch(0.17 0.006 240 / 0.99), oklch(0.1 0.02 240 / 0.99));
   }
 
   /* diagonal light sweep across the glass */
@@ -1643,9 +1643,9 @@
   background: linear-gradient(
   115deg,
   transparent 38%,
-  oklch(1 0 0 / 0.08) 48%,
-  oklch(1 0 0 / 0.14) 50%,
-  oklch(1 0 0 / 0.08) 52%,
+  oklch(1 0 240 / 0.08) 48%,
+  oklch(1 0 240 / 0.14) 50%,
+  oklch(1 0 240 / 0.08) 52%,
   transparent 62%
   );
   background-size: 300% 100%;
@@ -1673,7 +1673,7 @@
 
   /* kicker + pulsing dot */
   .lux-beacon-kicker {
-  color: oklch(0.9 0.05 90);
+  color: oklch(0.9 0.006 240);
   }
 
   .lux-beacon-dot {
@@ -1684,13 +1684,13 @@
   }
 
   .lux-beacon-up .lux-beacon-dot {
-  background: oklch(0.75 0.18 150);
-  box-shadow: 0 0 8px oklch(0.75 0.18 150);
+  background: oklch(0.75 0.18 124);
+  box-shadow: 0 0 8px oklch(0.75 0.18 124);
   }
 
   .lux-beacon-down .lux-beacon-dot {
-  background: oklch(0.68 0.22 25);
-  box-shadow: 0 0 8px oklch(0.68 0.22 25);
+  background: oklch(0.68 0.22 124);
+  box-shadow: 0 0 8px oklch(0.68 0.22 124);
   }
 
   @keyframes lux-beacon-dot {
@@ -1717,18 +1717,18 @@
   .lux-beacon-up .lux-beacon-value {
   background-image: linear-gradient(
   100deg,
-  oklch(0.99 0 0) 18%,
-  oklch(0.84 0.17 150) 40%,
-  oklch(0.99 0 0) 62%
+  oklch(0.99 0 240) 18%,
+  oklch(0.84 0.17 124) 40%,
+  oklch(0.99 0 240) 62%
   );
   }
 
   .lux-beacon-down .lux-beacon-value {
   background-image: linear-gradient(
   100deg,
-  oklch(0.99 0 0) 18%,
-  oklch(0.8 0.2 25) 40%,
-  oklch(0.99 0 0) 62%
+  oklch(0.99 0 240) 18%,
+  oklch(0.8 0.2 124) 40%,
+  oklch(0.99 0 240) 62%
   );
   }
 
@@ -1741,11 +1741,11 @@
   /* squircle medallion */
   .lux-beacon-medal {
   isolation: isolate;
-  color: oklch(0.99 0 0);
+  color: oklch(0.99 0 240);
   box-shadow:
-  inset 0 1px 2px oklch(1 0 0 / 0.4),
-  inset 0 -10px 20px oklch(0 0 0 / 0.45),
-  0 16px 32px -14px oklch(0 0 0 / 0.8);
+  inset 0 1px 2px oklch(1 0 240 / 0.4),
+  inset 0 -10px 20px oklch(0 0 240 / 0.45),
+  0 16px 32px -14px oklch(0 0 240 / 0.8);
   animation: lux-beacon-breathe 3.4s ease-in-out infinite;
   }
 
@@ -1758,16 +1758,16 @@
 
   .lux-beacon-up .lux-beacon-core {
   background:
-  radial-gradient(circle at 50% 18%, oklch(0.92 0.17 150), transparent 58%),
-  radial-gradient(circle at 50% 120%, oklch(0.26 0.09 155), transparent 72%),
-  linear-gradient(150deg, oklch(0.66 0.19 150), oklch(0.4 0.13 155));
+  radial-gradient(circle at 50% 18%, oklch(0.92 0.17 124), transparent 58%),
+  radial-gradient(circle at 50% 120%, oklch(0.26 0.006 240), transparent 72%),
+  linear-gradient(150deg, oklch(0.66 0.19 124), oklch(0.4 0.13 124));
   }
 
   .lux-beacon-down .lux-beacon-core {
   background:
-  radial-gradient(circle at 50% 18%, oklch(0.85 0.2 28), transparent 58%),
-  radial-gradient(circle at 50% 120%, oklch(0.28 0.13 25), transparent 72%),
-  linear-gradient(150deg, oklch(0.6 0.22 25), oklch(0.38 0.16 25));
+  radial-gradient(circle at 50% 18%, oklch(0.85 0.2 124), transparent 58%),
+  radial-gradient(circle at 50% 120%, oklch(0.28 0.13 124), transparent 72%),
+  linear-gradient(150deg, oklch(0.6 0.22 124), oklch(0.38 0.16 124));
   }
 
   /* rotating accent ring hugging the squircle */
@@ -1792,8 +1792,8 @@
   background: conic-gradient(
   from 0deg,
   transparent 0deg,
-  oklch(0.95 0.08 130 / 0.95) 40deg,
-  oklch(0.8 0.16 150 / 0.5) 90deg,
+  oklch(0.95 0.006 240 / 0.95) 40deg,
+  oklch(0.8 0.16 124 / 0.5) 90deg,
   transparent 150deg,
   transparent 360deg
   );
@@ -1803,8 +1803,8 @@
   background: conic-gradient(
   from 0deg,
   transparent 0deg,
-  oklch(0.9 0.1 45 / 0.95) 40deg,
-  oklch(0.75 0.2 25 / 0.5) 90deg,
+  oklch(0.9 0.1 124 / 0.95) 40deg,
+  oklch(0.75 0.2 124 / 0.5) 90deg,
   transparent 150deg,
   transparent 360deg
   );
@@ -1824,8 +1824,8 @@
   .lux-beacon-march {
   position: relative;
   display: block;
-  color: oklch(0.99 0 0);
-  filter: drop-shadow(0 2px 6px oklch(0 0 0 / 0.6));
+  color: oklch(0.99 0 240);
+  filter: drop-shadow(0 2px 6px oklch(0 0 240 / 0.6));
   animation: lux-beacon-float 2.4s ease-in-out infinite;
   }
 
@@ -1859,11 +1859,11 @@
   }
 
   .lux-beacon-up .lux-beacon-tick {
-  color: oklch(0.82 0.16 150);
+  color: oklch(0.82 0.16 124);
   }
 
   .lux-beacon-down .lux-beacon-tick {
-  color: oklch(0.78 0.19 25);
+  color: oklch(0.78 0.19 124);
   }
 
   /* clock: only the inner hands sweep smoothly, the rim stays still */
@@ -2163,44 +2163,44 @@
   0% {
     transform: scale(1) scaleY(1) skewX(0deg) translateY(0);
     opacity: 1;
-    color: oklch(0.72 0.19 45);
-    filter: drop-shadow(0 0 2px oklch(0.7 0.2 55 / 0.7));
+    color: oklch(0.72 0.19 124);
+    filter: drop-shadow(0 0 2px oklch(0.7 0.2 124 / 0.7));
   }
   15% {
     transform: scale(1.06) scaleY(1.12) skewX(-3deg) translateY(-1px);
     opacity: 0.92;
-    color: oklch(0.78 0.2 65);
-    filter: drop-shadow(0 -1px 4px oklch(0.75 0.21 60 / 0.85));
+    color: oklch(0.78 0.2 124);
+    filter: drop-shadow(0 -1px 4px oklch(0.75 0.21 124 / 0.85));
   }
   30% {
     transform: scale(0.97) scaleY(0.94) skewX(2deg) translateY(0.5px);
     opacity: 1;
-    color: oklch(0.68 0.19 38);
-    filter: drop-shadow(0 0 3px oklch(0.68 0.2 45 / 0.75));
+    color: oklch(0.68 0.19 124);
+    filter: drop-shadow(0 0 3px oklch(0.68 0.2 124 / 0.75));
   }
   45% {
     transform: scale(1.05) scaleY(1.14) skewX(3deg) translateY(-1.5px);
     opacity: 0.88;
-    color: oklch(0.82 0.19 78);
-    filter: drop-shadow(0 -2px 5px oklch(0.8 0.2 70 / 0.9));
+    color: oklch(0.82 0.19 124);
+    filter: drop-shadow(0 -2px 5px oklch(0.8 0.2 124 / 0.9));
   }
   60% {
     transform: scale(0.98) scaleY(0.96) skewX(-2deg) translateY(0.5px);
     opacity: 1;
-    color: oklch(0.7 0.19 42);
-    filter: drop-shadow(0 0 3px oklch(0.7 0.2 50 / 0.8));
+    color: oklch(0.7 0.19 124);
+    filter: drop-shadow(0 0 3px oklch(0.7 0.2 124 / 0.8));
   }
   78% {
     transform: scale(1.04) scaleY(1.09) skewX(-2deg) translateY(-1px);
     opacity: 0.94;
-    color: oklch(0.79 0.2 68);
-    filter: drop-shadow(0 -1px 4px oklch(0.77 0.21 62 / 0.85));
+    color: oklch(0.79 0.2 124);
+    filter: drop-shadow(0 -1px 4px oklch(0.77 0.21 124 / 0.85));
   }
   100% {
     transform: scale(1) scaleY(1) skewX(0deg) translateY(0);
     opacity: 1;
-    color: oklch(0.72 0.19 45);
-    filter: drop-shadow(0 0 2px oklch(0.7 0.2 55 / 0.7));
+    color: oklch(0.72 0.19 124);
+    filter: drop-shadow(0 0 2px oklch(0.7 0.2 124 / 0.7));
   }
 }
 
@@ -2239,7 +2239,7 @@
       color-mix(in oklab, var(--primary) 16%, transparent) 0%,
       transparent 60%
     ),
-    linear-gradient(180deg, oklch(0.15 0.04 160) 0%, oklch(0.11 0.03 155) 100%);
+    linear-gradient(180deg, oklch(0.15 0.006 240) 0%, oklch(0.11 0.006 240) 100%);
 }
 /* faint moving grid + vignette overlays */
 .inf-surface::before {
@@ -2258,7 +2258,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(70% 60% at 50% 50%, transparent 55%, oklch(0.09 0.03 155) 100%);
+  background: radial-gradient(70% 60% at 50% 50%, transparent 55%, oklch(0.09 0.006 240) 100%);
   pointer-events: none;
 }
 @keyframes inf-grid {
@@ -2603,8 +2603,8 @@
   border-radius: 9999px;
   background: radial-gradient(
     circle at 50% 50%,
-    oklch(0.62 0.24 170 / 0.45) 0%,
-    oklch(0.7 0.16 135 / 0.22) 42%,
+    oklch(0.62 0.22 124 / 0.45) 0%,
+    oklch(0.7 0.16 124 / 0.22) 42%,
     transparent 72%
   );
   filter: blur(12px);
@@ -2621,4 +2621,278 @@
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HIGGSFIELD-STYLE GRADING OVERLAY
+   Flat graphite ink surfaces, one acid-lime accent, pill buttons,
+   thin monochrome icons. Kept as a final un-layered block so it overrides
+   the utilities defined above without touching the original design markup.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  --background: oklch(0.185 0.006 240);
+  --foreground: oklch(0.975 0.002 250);
+  --card: oklch(0.228 0.006 240);
+  --card-foreground: oklch(0.975 0.002 250);
+  --popover: oklch(0.212 0.006 240);
+  --popover-foreground: oklch(0.975 0.002 250);
+  --primary: oklch(0.93 0.22 124);
+  --primary-foreground: oklch(0.17 0.02 128);
+  --secondary: oklch(0.27 0.006 240);
+  --secondary-foreground: oklch(0.975 0.002 250);
+  --muted: oklch(0.26 0.006 240);
+  --muted-foreground: oklch(0.7 0.006 250);
+  --accent: oklch(0.93 0.22 124);
+  --accent-foreground: oklch(0.17 0.02 128);
+  --destructive: oklch(0.65 0.22 25);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 11%);
+  --ring: oklch(0.93 0.22 124);
+  --up: oklch(0.88 0.2 138);
+  --down: oklch(0.68 0.22 25);
+  --gold: oklch(0.93 0.22 124);
+  --emerald: oklch(0.93 0.22 124);
+  --steel: oklch(0.8 0.006 240);
+  --chart-1: oklch(0.93 0.22 124);
+  --chart-2: oklch(0.8 0.14 130);
+  --chart-3: oklch(0.88 0.2 138);
+  --chart-4: oklch(0.68 0.22 25);
+  --chart-5: oklch(0.7 0.006 240);
+  --sidebar: oklch(0.212 0.006 240);
+  --sidebar-primary: oklch(0.93 0.22 124);
+  --sidebar-primary-foreground: oklch(0.17 0.02 128);
+  --sidebar-accent: oklch(0.27 0.006 240);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: oklch(0.93 0.22 124);
+}
+
+/* flat ink page — no colour wash */
+body {
+  background-color: oklch(0.185 0.006 240);
+  background-image:
+    radial-gradient(70rem 38rem at 80% -16%, oklch(0.93 0.22 124 / 0.05), transparent 62%),
+    radial-gradient(52rem 32rem at 2% 4%, oklch(0.93 0.22 124 / 0.03), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* graphite panels instead of tinted glass */
+.surface-luxe {
+  background-image: linear-gradient(
+    170deg,
+    oklch(0.245 0.006 240 / 0.96) 0%,
+    oklch(0.222 0.006 240 / 0.96) 60%,
+    oklch(0.208 0.006 240 / 0.96) 100%
+  );
+}
+.border-luxe::after {
+  background: linear-gradient(
+    140deg,
+    oklch(1 0 0 / 0.14),
+    oklch(1 0 0 / 0.05) 45%,
+    transparent 70%
+  );
+}
+.card-corner-glow::before {
+  background: radial-gradient(
+    circle at 70% 30%,
+    oklch(0.93 0.22 124 / 0.16) 0%,
+    oklch(0.93 0.22 124 / 0.06) 40%,
+    transparent 70%
+  );
+  filter: blur(18px);
+}
+
+/* ── buttons: acid-lime pill with ink text (primary) ── */
+.btn-luxe,
+button.btn-luxe,
+a.btn-luxe {
+  background-image: none;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: background-color 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+}
+.btn-luxe:hover {
+  filter: none;
+  background-color: oklch(0.97 0.2 124);
+  box-shadow: none;
+}
+.btn-luxe:active {
+  transform: scale(0.985);
+}
+.btn-luxe::before {
+  display: none !important;
+}
+.btn-luxe svg {
+  color: var(--primary-foreground);
+}
+
+/* ── buttons: quiet graphite pill (secondary / outline) ── */
+.btn-luxe-outline,
+button.btn-luxe-outline,
+a.btn-luxe-outline {
+  background-image: none;
+  background-color: oklch(0.24 0.006 240);
+  color: var(--foreground);
+  border: 1px solid oklch(1 0 0 / 0.1);
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn-luxe-outline:hover {
+  filter: none;
+  background-color: oklch(0.28 0.006 240);
+  border-color: oklch(1 0 0 / 0.18);
+  box-shadow: none;
+}
+
+/* nav pills / tabs keep the pill silhouette */
+.btn-luxe.no-sheen {
+  border-radius: 9999px;
+}
+
+/* ── accent type: solid lime, no rainbow gradient, no shimmer ── */
+.text-gradient,
+.text-shine {
+  background-image: linear-gradient(
+    var(--primary) 0%,
+    var(--primary) 100%
+  );
+  animation: none !important;
+  background-size: 100% 100%;
+}
+
+/* ── icons: thin, monochrome, understated ── */
+.lucide {
+  stroke-width: 1.6;
+}
+.lucide.h-3,
+.lucide.h-3\.5,
+.lucide.w-3,
+.lucide.w-3\.5 {
+  stroke-width: 1.8;
+}
+
+/* icon chips: graphite square with a light glyph */
+.icon-chip {
+  background: oklch(1 0 0 / 0.06) !important;
+  color: var(--foreground) !important;
+  box-shadow: inset 0 0 0 1px oklch(1 0 0 / 0.1) !important;
+}
+
+/* market tiles / profile card: neutral glass, lime only on hover edge */
+.market-tile {
+  background-image: linear-gradient(
+    155deg,
+    oklch(0.27 0.006 240 / 0.55) 0%,
+    oklch(0.235 0.006 240 / 0.6) 55%,
+    oklch(0.21 0.006 240 / 0.65) 100%
+  );
+}
+.market-tile:hover {
+  background-image: linear-gradient(
+    155deg,
+    oklch(0.3 0.006 240 / 0.62) 0%,
+    oklch(0.26 0.006 240 / 0.62) 55%,
+    oklch(0.23 0.006 240 / 0.62) 100%
+  );
+}
+.welcome-luxe-purple {
+  background: radial-gradient(
+    120% 90% at 50% 45%,
+    oklch(0.93 0.22 124 / 0.1),
+    transparent 62%
+  );
+}
+
+/* keep the avatar ring + welcome border trace subtle under the bright lime */
+.avatar-glow-ring {
+  background: conic-gradient(
+    from 0deg,
+    oklch(0.93 0.22 124 / 0.7),
+    oklch(1 0 0 / 0.25),
+    oklch(0.93 0.22 124 / 0.5),
+    oklch(0.93 0.22 124 / 0.7)
+  );
+  filter: blur(10px);
+  opacity: 0.4;
+}
+.welcome-luxe-border {
+  background: conic-gradient(
+    from var(--welcome-angle, 0deg),
+    transparent 0deg,
+    oklch(0.93 0.22 124 / 0.5) 40deg,
+    transparent 130deg,
+    transparent 360deg
+  );
+  opacity: 0.6;
+}
+
+/* corner bloom: barely-there lime instead of an olive wash */
+.card-corner-glow::before {
+  background: radial-gradient(
+    circle at 70% 30%,
+    oklch(0.93 0.22 124 / 0.07) 0%,
+    oklch(0.93 0.22 124 / 0.025) 40%,
+    transparent 70%
+  );
+  filter: blur(26px);
+}
+
+/* final pass: keep the big panels graphite, lime stays for type + controls */
+.card-corner-glow::before {
+  background: radial-gradient(
+    circle at 70% 30%,
+    oklch(0.93 0.22 124 / 0.05) 0%,
+    oklch(0.93 0.22 124 / 0.018) 40%,
+    transparent 70%
+  );
+  filter: blur(30px);
+}
+.welcome-luxe-purple {
+  background: radial-gradient(
+    120% 90% at 50% 45%,
+    oklch(0.93 0.22 124 / 0.05),
+    transparent 62%
+  );
+  opacity: 0.5;
+}
+
+/* flat panels: drop the corner bloom entirely (higgsfield surfaces are flat) */
+.card-corner-glow::before {
+  display: none;
+}
+.welcome-luxe-purple {
+  display: none;
+}
+
+/* opaque graphite panels so the page bloom can't tint them */
+.surface-luxe {
+  background-image: linear-gradient(
+    170deg,
+    oklch(0.245 0.006 240) 0%,
+    oklch(0.222 0.006 240) 60%,
+    oklch(0.208 0.006 240) 100%
+  );
+}
+body {
+  background-color: oklch(0.185 0.006 240);
+  background-image:
+    radial-gradient(70rem 34rem at 82% -18%, oklch(0.93 0.22 124 / 0.03), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* monochrome secondary accents: the old gold/emerald decorations become
+   neutral light-grey so acid lime stays the single accent colour */
+:root {
+  --gold: oklch(0.88 0.012 120);
+  --emerald: oklch(0.88 0.012 150);
+  --color-gold: oklch(0.88 0.012 120);
+  --color-emerald: oklch(0.88 0.012 150);
 }

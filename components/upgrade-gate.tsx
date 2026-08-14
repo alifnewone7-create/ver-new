@@ -98,8 +98,8 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
             <div className="border-luxe surface-luxe relative z-10 w-full max-w-sm overflow-hidden rounded-[28px] shadow-2xl shadow-primary/30">
               {/* ambient color grading */}
               <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" />
-              <div className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-primary/25 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-24 -left-16 h-52 w-52 rounded-full bg-accent/20 blur-3xl" />
+              <div className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-primary/12 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -left-16 h-52 w-52 rounded-full bg-accent/12 blur-3xl" />
 
               {/* top bar keeps the close button safely inside the card */}
               <div className="relative z-30 flex justify-end px-4 pt-4">
@@ -115,8 +115,8 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
 
               <div className="relative z-10 flex flex-col items-center px-6 pb-7 pt-1 text-center sm:px-8">
                 {/* icon medallion */}
-                <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary/25 via-primary/10 to-accent/20 ring-1 ring-primary/40">
-                  <div className="pointer-events-none absolute inset-0 rounded-full bg-primary/20 blur-xl" />
+                <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary/12 via-primary/10 to-accent/12 ring-1 ring-primary/40">
+                  <div className="pointer-events-none absolute inset-0 rounded-full bg-primary/12 blur-xl" />
                   <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-background/60 text-primary ring-1 ring-primary/30">
                     <Gauge className="h-7 w-7" />
                   </div>
@@ -137,7 +137,7 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
 
                 {/* reset time chip */}
                 <div className="mt-5 flex w-full items-start gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] p-3.5 text-left">
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/25">
+                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl icon-chip">
                     <Clock className="h-4 w-4" />
                   </span>
                   <p className="text-xs leading-relaxed text-muted-foreground">
@@ -173,12 +173,12 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
 
               {/* Header band */}
               <div className="relative overflow-hidden border-b border-border/60 px-5 pb-6 pt-5 sm:px-8 sm:pb-7 sm:pt-6">
-                <div className="pointer-events-none absolute -right-16 -top-20 h-44 w-44 rounded-full bg-primary/25 blur-3xl" />
-                <div className="pointer-events-none absolute -left-10 -top-16 h-36 w-36 rounded-full bg-accent/15 blur-3xl" />
+                <div className="pointer-events-none absolute -right-16 -top-20 h-44 w-44 rounded-full bg-primary/12 blur-3xl" />
+                <div className="pointer-events-none absolute -left-10 -top-16 h-36 w-36 rounded-full bg-accent/12 blur-3xl" />
 
                 <div className="relative flex items-start justify-between gap-3">
                   <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary shadow-lg shadow-primary/20 ring-1 ring-primary/30 sm:h-14 sm:w-14">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl icon-chip shadow-lg shadow-primary/20 ring-1 ring-primary/30 sm:h-14 sm:w-14">
                       <Lock className="lock-anim h-6 w-6 sm:h-7 sm:w-7" />
                     </div>
                     <h2
@@ -217,7 +217,7 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
                     'Full access to every premium tool',
                   ].map((perk) => (
                     <li key={perk} className="flex items-start gap-3 text-sm">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full icon-chip">
                         <Check className="h-3.5 w-3.5" />
                       </span>
                       <span className="text-foreground/90">{perk}</span>
@@ -298,7 +298,7 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
                         key={step.title}
                         className="flex gap-3 rounded-2xl border border-border bg-background/40 p-3"
                       >
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-sm font-bold text-primary">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-sm font-bold text-primary">
                           {i + 1}
                         </span>
                         <div>
@@ -342,7 +342,7 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
                           rel="noopener noreferrer"
                         />
                       }
-                      className="group h-11 w-full gap-2 rounded-xl border border-accent/40 bg-accent/10 text-sm font-semibold text-accent transition-shadow hover:bg-accent/15"
+                      className="group h-11 w-full gap-2 rounded-xl border border-accent/40 bg-accent/10 text-sm font-semibold text-accent transition-shadow hover:bg-accent/12"
                     >
                       <Headset className="h-[18px] w-[18px]" />
                       Contact Admin
@@ -352,11 +352,11 @@ export function UpgradeGateProvider({ children }: { children: ReactNode }) {
 
                 {/* Buy License */}
                 <div className="surface-luxe relative flex flex-col overflow-hidden rounded-3xl border border-primary/40 p-5 shadow-2xl shadow-primary/20 ring-1 ring-primary/20 sm:p-6">
-                  <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/20 blur-3xl" />
+                  <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/12 blur-3xl" />
 
                   <div className="relative flex items-center justify-between">
                     <h3 className="text-lg font-bold">Buy License</h3>
-                    <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
+                    <span className="rounded-full bg-primary/12 px-3 py-1 text-xs font-semibold text-primary">
                       Direct access
                     </span>
                   </div>

@@ -42,12 +42,12 @@ export function DashboardContent({ profile }: { profile: UserProfile }) {
           {/* animated conic luxury border trace */}
           <span aria-hidden className="welcome-luxe-border" />
           {/* corner glow */}
-          <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,var(--primary)_38%,transparent)] blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,oklch(0.58_0.24_180)_24%,transparent)] blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,var(--primary)_7%,transparent)] blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,oklch(0.93_0.2_124)_6%,transparent)] blur-3xl" />
           {/* purple inner glow — breathing radial bloom from center */}
           <span aria-hidden className="welcome-luxe-purple pointer-events-none absolute inset-0 rounded-[1.75rem]" />
           {/* inner glow — soft light bleeding from the top edge */}
-          <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] shadow-[inset_0_1px_0_oklch(1_0_0/0.08),inset_0_40px_80px_-40px_color-mix(in_oklab,var(--primary)_45%,transparent),inset_0_0_120px_-30px_color-mix(in_oklab,oklch(0.55_0.24_180)_55%,transparent)]" />
+          <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] shadow-[inset_0_1px_0_oklch(1_0_0/0.08)]" />
 
           <div className="relative z-10 flex flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:gap-7 sm:text-left">
             {/* Profile picture — floating with animated glow ring */}
@@ -57,7 +57,7 @@ export function DashboardContent({ profile }: { profile: UserProfile }) {
               {/* breathing halo */}
               <span
                 aria-hidden
-                className="avatar-halo pointer-events-none absolute -inset-2 rounded-[1.6rem] bg-primary/30 blur-xl"
+                className="avatar-halo pointer-events-none absolute -inset-2 rounded-[1.6rem] bg-primary/12 blur-xl"
               />
               <span className="relative z-10 block h-full w-full overflow-hidden rounded-[1.4rem] ring-1 ring-primary/40">
                 <Image
@@ -71,7 +71,7 @@ export function DashboardContent({ profile }: { profile: UserProfile }) {
                 {/* subtle sheen on top of the photo */}
                 <span
                   aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-primary/25"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-primary/12"
                 />
               </span>
             </span>
@@ -106,13 +106,13 @@ export function DashboardContent({ profile }: { profile: UserProfile }) {
         {/* Trading tools */}
         <section className="border-luxe surface-luxe relative overflow-hidden rounded-[1.75rem] p-5 sm:p-7">
           {/* ambient corner glow */}
-          <div className="pointer-events-none absolute -right-24 -top-24 h-52 w-52 rounded-full bg-[color-mix(in_oklab,var(--gold)_22%,transparent)] blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-28 -left-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,var(--primary)_20%,transparent)] blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-52 w-52 rounded-full bg-[color-mix(in_oklab,var(--gold)_14%,transparent)] blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-28 -left-24 h-56 w-56 rounded-full bg-[color-mix(in_oklab,var(--primary)_7%,transparent)] blur-3xl" />
 
           <div className="relative z-10">
             <div className="flex items-start gap-3 sm:gap-4">
-              <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[color-mix(in_oklab,var(--gold)_38%,transparent)] via-[color-mix(in_oklab,var(--gold)_16%,transparent)] to-[color-mix(in_oklab,var(--primary)_26%,transparent)] text-[var(--gold)] ring-1 ring-[color-mix(in_oklab,var(--gold)_32%,transparent)]">
-                <span className="pointer-events-none absolute -right-3 -top-3 h-8 w-8 rounded-full bg-[color-mix(in_oklab,var(--gold)_45%,transparent)] blur-md" />
+              <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[color-mix(in_oklab,var(--gold)_14%,transparent)] via-[color-mix(in_oklab,var(--gold)_14%,transparent)] to-[color-mix(in_oklab,var(--primary)_7%,transparent)] text-[var(--gold)] ring-1 ring-[color-mix(in_oklab,var(--gold)_14%,transparent)]">
+                <span className="pointer-events-none absolute -right-3 -top-3 h-8 w-8 rounded-full bg-[color-mix(in_oklab,var(--gold)_14%,transparent)] blur-md" />
                 <LayoutGrid className="relative h-5 w-5" />
               </span>
               <div className="min-w-0 flex-1">
@@ -125,7 +125,7 @@ export function DashboardContent({ profile }: { profile: UserProfile }) {
               </div>
             </div>
 
-            <div className="my-5 h-px w-full bg-gradient-to-r from-[color-mix(in_oklab,var(--gold)_40%,transparent)] via-border to-transparent" />
+            <div className="my-5 h-px w-full bg-gradient-to-r from-[color-mix(in_oklab,var(--gold)_14%,transparent)] via-border to-transparent" />
 
             <ToolCards />
           </div>

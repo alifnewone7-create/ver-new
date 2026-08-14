@@ -72,7 +72,7 @@ export function FeatureGrid() {
             >
               {/* icon + connecting hairline */}
               <div className="relative z-10 flex items-center gap-3">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/25">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl icon-chip">
                   <f.icon className={`h-5 w-5 ${f.anim}`} />
                 </span>
                 <span className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />

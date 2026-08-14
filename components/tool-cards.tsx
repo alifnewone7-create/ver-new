@@ -24,9 +24,9 @@ type Tool = {
 }
 
 /* Green gradient family — emerald main + lime & teal secondaries */
-const PURPLE = { hue: 158, chroma: 0.2 }
-const EMERALD = { hue: 134, chroma: 0.18 }
-const GOLD = { hue: 184, chroma: 0.13 }
+const PURPLE = { hue: 124, chroma: 0.2 }
+const EMERALD = { hue: 124, chroma: 0.16 }
+const GOLD = { hue: 124, chroma: 0.12 }
 
 const tools: Tool[] = [
   {
@@ -94,7 +94,7 @@ function ToolCard({ tool, index }: { tool: Tool; index: number }) {
           animationDelay: `${index * 80}ms`,
         } as React.CSSProperties
       }
-      className="group animate-in fade-in slide-in-from-bottom-3 relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[color:var(--c-glow-soft)] bg-[oklch(0.19_0.04_154)] p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-[color:var(--c-glow)] hover:shadow-[0_18px_45px_-22px_var(--c-glow)] sm:p-5"
+      className="group animate-in fade-in slide-in-from-bottom-3 relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[color:var(--c-glow-soft)] bg-[oklch(0.225_0.006_240)] p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-[color:var(--c-glow)] hover:shadow-[0_18px_45px_-22px_var(--c-glow)] sm:p-5"
     >
       {/* left accent bar that lights up on hover */}
       <span
@@ -107,13 +107,12 @@ function ToolCard({ tool, index }: { tool: Tool; index: number }) {
       <span
         className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border transition-transform duration-500 group-hover:scale-105"
         style={{
-          background: 'linear-gradient(150deg, var(--c-light), var(--c-dark))',
-          borderColor: 'var(--c-light)',
-          boxShadow:
-            'inset 0 1px 4px oklch(1 0 0 / 0.3), inset 0 -6px 12px oklch(0 0 0 / 0.3), 0 8px 22px -10px var(--c-glow)',
+          background: 'oklch(1 0 0 / 0.06)',
+          borderColor: 'oklch(1 0 0 / 0.12)',
+          boxShadow: 'inset 0 1px 0 oklch(1 0 0 / 0.08)',
         }}
       >
-        <tool.icon className="h-5 w-5 text-[oklch(0.99_0_0)] drop-shadow-[0_1px_3px_oklch(0_0_0/0.4)]" />
+        <tool.icon className="h-5 w-5 text-primary" />
       </span>
 
       {/* labels */}

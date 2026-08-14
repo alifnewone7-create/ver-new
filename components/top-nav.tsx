@@ -380,7 +380,7 @@ export function TopNav() {
           <aside className="animate-in slide-in-from-left surface-luxe fixed inset-y-0 left-0 z-50 flex w-[19rem] max-w-[82%] flex-col border-r border-border/60 shadow-[0_0_32px_-14px_oklch(0.5_0.2_165_/_0.3)] backdrop-blur-2xl duration-300">
             {/* Header with profile */}
             <div className="relative overflow-hidden border-b border-border/60 px-4 pb-4 pt-5">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/12 via-primary/5 to-transparent" />
               <div className="relative flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <Image

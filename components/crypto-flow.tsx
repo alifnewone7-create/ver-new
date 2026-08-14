@@ -70,7 +70,7 @@ export function CryptoFlow() {
       {COINS.map((coin, i) => (
         <span
           key={i}
-          className={`coin-drift absolute flex items-center justify-center rounded-full border border-primary/50 bg-primary/20 text-primary-foreground opacity-80 shadow-lg shadow-primary/40 ring-1 ring-primary/30 backdrop-blur-sm ${coin.className} ${coin.size}`}
+          className={`coin-drift absolute flex items-center justify-center rounded-full border border-primary/50 bg-primary/12 text-primary-foreground opacity-80 shadow-lg shadow-primary/40 ring-1 ring-primary/30 backdrop-blur-sm ${coin.className} ${coin.size}`}
           style={{ animationDelay: coin.delay, animationDuration: coin.duration }}
         >
           <coin.Icon className="h-1/2 w-1/2" strokeWidth={2.25} />

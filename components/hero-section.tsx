@@ -9,7 +9,7 @@ export function HeroSection() {
     <section id="about" className="relative overflow-hidden">
       {/* ambient background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-primary/15 blur-[120px]" />
+        <div className="absolute left-1/2 top-0 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-primary/12 blur-[120px]" />
         <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-accent/10 blur-[100px]" />
       </div>
 
