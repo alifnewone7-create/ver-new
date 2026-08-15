@@ -2667,15 +2667,11 @@
   --sidebar-ring: oklch(0.93 0.22 124);
 }
 
-/* graded ink page — layered colour wash */
+/* flat ink page — higgsfield graphite, no colour wash */
 body {
-  background-color: oklch(0.17 0.008 220);
+  background-color: oklch(0.185 0.006 240);
   background-image:
-    radial-gradient(64rem 42rem at 84% -12%, oklch(0.93 0.22 124 / 0.16), transparent 60%),
-    radial-gradient(50rem 36rem at -6% 8%, oklch(0.82 0.16 170 / 0.12), transparent 58%),
-    radial-gradient(46rem 40rem at 16% 104%, oklch(0.86 0.18 140 / 0.1), transparent 60%),
-    radial-gradient(58rem 48rem at 104% 82%, oklch(0.75 0.14 200 / 0.12), transparent 62%),
-    linear-gradient(160deg, oklch(0.23 0.014 150) 0%, oklch(0.185 0.01 210) 45%, oklch(0.14 0.012 240) 100%);
+    radial-gradient(70rem 34rem at 82% -18%, oklch(0.93 0.22 124 / 0.03), transparent 60%);
   background-attachment: fixed;
 }
 
@@ -2706,29 +2702,24 @@ body {
   filter: blur(18px);
 }
 
-/* ── buttons: acid-lime gradient, default rounded rectangle (primary) ──
-   Note: no border-radius declared here so the element's own Tailwind
-   radius classes (rounded-lg / rounded-xl) shape the button. */
+/* ── buttons: higgsfield acid-lime flat pill with ink text (primary) ── */
 .btn-luxe,
 button.btn-luxe,
 a.btn-luxe {
+  background-image: none;
   background-color: var(--primary);
-  background-image: linear-gradient(
-    135deg,
-    oklch(0.96 0.2 116) 0%,
-    oklch(0.9 0.22 128) 55%,
-    oklch(0.82 0.19 148) 100%
-  );
   color: var(--primary-foreground);
   border: none;
+  border-radius: 9999px;
   font-weight: 700;
   letter-spacing: 0.01em;
-  box-shadow: 0 12px 26px -14px oklch(0.9 0.22 128 / 0.6);
-  transition: filter 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: none;
+  transition: background-color 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
 }
 .btn-luxe:hover {
-  filter: brightness(1.07);
-  box-shadow: 0 16px 32px -14px oklch(0.9 0.22 128 / 0.75);
+  filter: none;
+  background-color: oklch(0.97 0.2 124);
+  box-shadow: none;
 }
 .btn-luxe:active {
   transform: scale(0.985);
@@ -2740,45 +2731,37 @@ a.btn-luxe {
   color: var(--primary-foreground);
 }
 
-/* default rounded-rectangle silhouette for real buttons/links */
-button.btn-luxe,
-a.btn-luxe,
-button.btn-luxe-outline,
-a.btn-luxe-outline {
-  border-radius: var(--radius-lg);
-}
-
-/* ── buttons: quiet graphite gradient, rounded rectangle (secondary / outline) ── */
+/* ── buttons: quiet graphite flat pill (secondary / outline) ── */
 .btn-luxe-outline,
 button.btn-luxe-outline,
 a.btn-luxe-outline {
+  background-image: none;
   background-color: oklch(0.24 0.006 240);
-  background-image: linear-gradient(
-    160deg,
-    oklch(0.28 0.01 190) 0%,
-    oklch(0.235 0.008 220) 60%,
-    oklch(0.21 0.008 235) 100%
-  );
   color: var(--foreground);
-  border: 1px solid oklch(1 0 0 / 0.12);
+  border: 1px solid oklch(1 0 0 / 0.1);
+  border-radius: 9999px;
   font-weight: 600;
   box-shadow: none;
-  transition: filter 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 .btn-luxe-outline:hover {
-  filter: brightness(1.12);
-  border-color: oklch(1 0 0 / 0.2);
+  filter: none;
+  background-color: oklch(0.28 0.006 240);
+  border-color: oklch(1 0 0 / 0.18);
   box-shadow: none;
 }
 
-/* ── accent type: lime → emerald → teal gradient ── */
+/* nav pills / tabs keep the pill silhouette */
+.btn-luxe.no-sheen {
+  border-radius: 9999px;
+}
+
+/* ── accent type: solid lime, no rainbow gradient, no shimmer ── */
 .text-gradient,
 .text-shine {
   background-image: linear-gradient(
-    100deg,
-    oklch(0.95 0.2 116) 0%,
-    oklch(0.88 0.19 145) 50%,
-    oklch(0.8 0.15 185) 100%
+    var(--primary) 0%,
+    var(--primary) 100%
   );
   animation: none !important;
   background-size: 100% 100%;
@@ -2880,35 +2863,21 @@ a.btn-luxe-outline {
   opacity: 0.5;
 }
 
-/* graded panels: soft corner bloom re-enabled for the gradient look */
+/* flat panels: drop the corner bloom entirely (higgsfield surfaces are flat) */
 .card-corner-glow::before {
-  display: block;
-  background: radial-gradient(
-    circle at 70% 30%,
-    oklch(0.93 0.22 124 / 0.14) 0%,
-    oklch(0.8 0.15 180 / 0.06) 45%,
-    transparent 70%
-  );
-  filter: blur(22px);
+  display: none;
 }
 .welcome-luxe-purple {
-  display: block;
-  background: radial-gradient(
-    120% 90% at 50% 45%,
-    oklch(0.93 0.22 124 / 0.12),
-    oklch(0.8 0.15 180 / 0.05) 50%,
-    transparent 66%
-  );
-  opacity: 0.6;
+  display: none;
 }
 
-/* graded graphite panels with a faint colour tint */
+/* opaque graphite panels so the page bloom can't tint them */
 .surface-luxe {
   background-image: linear-gradient(
     170deg,
-    oklch(0.26 0.012 145) 0%,
-    oklch(0.228 0.01 205) 55%,
-    oklch(0.205 0.01 232) 100%
+    oklch(0.245 0.006 240) 0%,
+    oklch(0.222 0.006 240) 60%,
+    oklch(0.208 0.006 240) 100%
   );
 }
 
