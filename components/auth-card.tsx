@@ -250,7 +250,13 @@ const brandPoints = [
 
 export function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="relative grid min-h-dvh grid-cols-1 bg-background lg:grid-cols-2">
+    <main className="relative grid min-h-dvh grid-cols-1 lg:grid-cols-2">
+      {/* ambient gradient glows */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-40 left-1/4 h-[28rem] w-[28rem] rounded-full bg-primary/12 blur-[140px]" />
+        <div className="absolute -bottom-24 right-0 h-96 w-96 rounded-full bg-accent/10 blur-[120px]" />
+        <div className="absolute left-0 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[oklch(0.8_0.15_180)]/10 blur-[110px]" />
+      </div>
       <StarField />
       {/* Branding panel - visible on large screens */}
       <aside className="relative z-10 hidden flex-col justify-between border-r border-border p-10 xl:p-14 lg:flex">
