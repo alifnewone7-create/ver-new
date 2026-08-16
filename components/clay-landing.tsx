@@ -624,7 +624,7 @@ function ClayFooter() {
 
 export function ClayLanding() {
   return (
-    <div id="top" className="relative min-h-dvh bg-background">
+    <div id="top" className="relative min-h-dvh">
       <ClayNavbar />
       <main>
         <ClayHero />
