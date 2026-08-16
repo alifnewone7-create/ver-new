@@ -315,13 +315,15 @@ function ClayHero() {
           </span>
 
           <h1 className="mt-6 text-balance text-4xl font-extrabold leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
-            Trade Smarter{' '}
-            <span className="text-primary">With Vertex AI</span>
+            Trade with Intelligence.{' '}
+            <span className="text-primary">Win with Vertex AI.</span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
-            Vertex AI scans forex, crypto and OTC markets in real time and delivers
-            machine-grade BUY / SELL signals — no guesswork, no emotion, just data.
+            Vertex AI is an advanced trading intelligence platform engineered to
+            uncover high-probability opportunities before they happen. Using
+            real-time analytics and AI-driven precision, it empowers you to make
+            faster, smarter, and more confident trading decisions.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3.5 sm:flex-row sm:justify-center lg:justify-start">
