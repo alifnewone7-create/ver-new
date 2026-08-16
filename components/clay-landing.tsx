@@ -320,10 +320,9 @@ function ClayHero() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
-            Vertex AI is an advanced trading intelligence platform engineered to
-            uncover high-probability opportunities before they happen. Using
-            real-time analytics and AI-driven precision, it empowers you to make
-            faster, smarter, and more confident trading decisions.
+            An advanced trading intelligence platform that uncovers
+            high-probability opportunities in real time — empowering faster,
+            smarter, more confident trades.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3.5 sm:flex-row sm:justify-center lg:justify-start">
