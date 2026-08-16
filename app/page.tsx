@@ -1,5 +1,5 @@
-import { LandingPage } from '@/components/landing-page'
+import { ClayLanding } from '@/components/clay-landing'
 
 export default function Home() {
-  return <LandingPage />
+  return <ClayLanding />
 }

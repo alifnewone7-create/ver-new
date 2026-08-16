@@ -2889,3 +2889,158 @@ a.btn-luxe-outline {
   --color-gold: oklch(0.88 0.012 120);
   --color-emerald: oklch(0.88 0.012 150);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CLAY DESIGN SYSTEM — new landing page (claymorphism, trading/robotic/AI)
+   Soft extruded surfaces, pressed wells, acid-lime clay buttons.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* primary lime clay button — matches the reference: bright lime rounded
+   rectangle, ink text, soft top gloss + darker bottom lip + extrusion */
+.btn-clay {
+  position: relative;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(180deg, oklch(0.96 0.2 121) 0%, oklch(0.9 0.22 125) 100%);
+  color: oklch(0.17 0.02 128);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow:
+    inset 0 2px 1px oklch(1 0 0 / 0.5),
+    inset 0 -3px 0 oklch(0.68 0.18 124 / 0.9),
+    0 5px 0 oklch(0.46 0.13 124 / 0.55),
+    0 16px 28px -14px oklch(0.9 0.22 124 / 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.2s ease;
+}
+.btn-clay:hover {
+  filter: brightness(1.06);
+}
+.btn-clay:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 1px oklch(1 0 0 / 0.4),
+    inset 0 -2px 0 oklch(0.68 0.18 124 / 0.8),
+    0 2px 0 oklch(0.46 0.13 124 / 0.5),
+    0 8px 14px -10px oklch(0.9 0.22 124 / 0.4);
+}
+.btn-clay svg {
+  color: oklch(0.17 0.02 128);
+}
+
+/* graphite clay button (secondary) */
+.btn-clay-dark {
+  position: relative;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(180deg, oklch(0.31 0.008 240) 0%, oklch(0.245 0.008 240) 100%);
+  color: var(--foreground);
+  font-weight: 600;
+  box-shadow:
+    inset 0 1.5px 0 oklch(1 0 0 / 0.14),
+    inset 0 -3px 0 oklch(0.13 0.006 240),
+    0 5px 0 oklch(0.1 0.006 240 / 0.9),
+    0 16px 26px -16px oklch(0 0 0 / 0.85);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.2s ease;
+}
+.btn-clay-dark:hover {
+  filter: brightness(1.12);
+}
+.btn-clay-dark:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1.5px 0 oklch(1 0 0 / 0.1),
+    inset 0 -2px 0 oklch(0.13 0.006 240),
+    0 2px 0 oklch(0.1 0.006 240 / 0.9),
+    0 8px 14px -12px oklch(0 0 0 / 0.7);
+}
+
+/* puffy raised clay panel */
+.clay-card {
+  background: linear-gradient(180deg, oklch(0.265 0.008 240) 0%, oklch(0.215 0.008 240) 100%);
+  border-radius: 26px;
+  box-shadow:
+    inset 0 1.5px 0 oklch(1 0 0 / 0.1),
+    inset 0 -4px 10px oklch(0 0 0 / 0.28),
+    0 8px 0 oklch(0.135 0.006 240 / 0.9),
+    0 28px 44px -26px oklch(0 0 0 / 0.85);
+}
+
+/* pressed / recessed clay well */
+.clay-inset {
+  background: oklch(0.172 0.006 240);
+  border-radius: 16px;
+  box-shadow:
+    inset 0 3px 8px oklch(0 0 0 / 0.55),
+    inset 0 -1px 0 oklch(1 0 0 / 0.07);
+}
+
+/* small raised clay squircle for icons */
+.clay-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, oklch(0.31 0.01 240) 0%, oklch(0.245 0.008 240) 100%);
+  border-radius: 16px;
+  box-shadow:
+    inset 0 1.5px 0 oklch(1 0 0 / 0.14),
+    inset 0 -2px 0 oklch(0.13 0.006 240),
+    0 4px 0 oklch(0.12 0.006 240 / 0.8),
+    0 12px 18px -12px oklch(0 0 0 / 0.8);
+}
+.clay-chip-lime {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, oklch(0.95 0.21 122) 0%, oklch(0.88 0.22 126) 100%);
+  color: oklch(0.17 0.02 128);
+  border-radius: 16px;
+  box-shadow:
+    inset 0 2px 1px oklch(1 0 0 / 0.45),
+    inset 0 -2px 0 oklch(0.66 0.17 124),
+    0 4px 0 oklch(0.44 0.12 124 / 0.6),
+    0 12px 20px -12px oklch(0.9 0.22 124 / 0.5);
+}
+.clay-chip-lime svg {
+  color: oklch(0.17 0.02 128);
+}
+
+/* big lime clay CTA panel */
+.clay-lime-panel {
+  background: linear-gradient(180deg, oklch(0.95 0.21 122) 0%, oklch(0.86 0.22 127) 100%);
+  color: oklch(0.17 0.02 128);
+  border-radius: 30px;
+  box-shadow:
+    inset 0 3px 1px oklch(1 0 0 / 0.5),
+    inset 0 -5px 0 oklch(0.66 0.17 124),
+    0 10px 0 oklch(0.42 0.12 124 / 0.55),
+    0 34px 54px -28px oklch(0.9 0.22 124 / 0.4);
+}
+
+/* tiny clay ball (window dots, bullets) */
+.clay-dot {
+  border-radius: 9999px;
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.3),
+    inset 0 -1.5px 2px oklch(0 0 0 / 0.45);
+}
+
+/* slow float for the hero robot chip */
+.clay-float {
+  animation: clay-float 4.2s ease-in-out infinite;
+}
+@keyframes clay-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .clay-float {
+    animation: none !important;
+  }
+}
