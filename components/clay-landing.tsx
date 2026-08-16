@@ -335,17 +335,6 @@ function ClayHero() {
               View Pricing
             </a>
           </div>
-
-          {/* stat chips */}
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {STATS.map((s) => (
-              <div key={s.label} className="clay-card rounded-2xl px-3 py-4 text-center">
-                <s.icon className="mx-auto h-4.5 w-4.5 text-primary" />
-                <p className="mt-2 text-lg font-extrabold tracking-tight sm:text-xl">{s.value}</p>
-                <p className="mt-0.5 text-[11px] text-muted-foreground">{s.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* terminal */}
