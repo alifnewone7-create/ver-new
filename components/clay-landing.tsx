@@ -315,8 +315,8 @@ function ClayHero() {
           </span>
 
           <h1 className="mt-6 text-balance text-4xl font-extrabold leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">
-            The robotic trading brain built for{' '}
-            <span className="text-primary">precision</span>
+            Trade Smarter{' '}
+            <span className="text-primary">With Vertex AI</span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
